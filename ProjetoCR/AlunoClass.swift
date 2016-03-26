@@ -24,7 +24,7 @@ class Aluno {
 		self.periodo	= periodo
 		self.crGlobal	= crGlobal
 		self.crPeriodo	= crPeriodo
-	}
+    }
 	
 	
 }
