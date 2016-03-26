@@ -25,6 +25,8 @@ class Aluno {
 		self.crGlobal	= crGlobal
 		self.crPeriodo	= crPeriodo
     }
+    
+    // well fazendo verificação
 	
 	
 }
