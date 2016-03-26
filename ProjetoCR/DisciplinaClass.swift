@@ -12,9 +12,9 @@ class Disciplina {
 	private var nome: String
 	private var qtdCreditos: Int
 	private var codigo: String
-	private var criterio: Int
+	private var criterio: Criterio
 	
-	init(nome: String, qtdCreditos: Int, codigo: String, criterio: Int){
+	init(nome: String, qtdCreditos: Int, codigo: String, criterio: Criterio){
 		self.nome			= nome
 		self.qtdCreditos	= qtdCreditos
 		self.codigo			= codigo

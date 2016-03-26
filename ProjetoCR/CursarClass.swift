@@ -9,11 +9,15 @@
 import Foundation
 
 class Cursar {
-	private var semestre: Int
-	private var graus = [Double]()
+	private var aluno:		Aluno
+	private var disciplina:	Disciplina
+	private var semestre:	Int
+	private var graus		= [Double]()
 	
-	init(semestre: Int){
-		self.semestre = semestre
-		self.graus = [0,0,0,0]
+	init(aluno: Aluno, disciplina: Disciplina, semestre: Int){
+		self.aluno		= aluno
+		self.disciplina = disciplina
+		self.semestre	= semestre
+		self.graus		= [0,0,0,0]
 	}
 }

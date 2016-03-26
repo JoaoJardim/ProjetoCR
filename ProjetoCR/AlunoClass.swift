@@ -10,6 +10,7 @@ import Foundation
 
 class Aluno {
 	private var matricula:	String
+//	private var email:		String
 	private var senha:		String
 	private var nome:		String
 	private var periodo:	Int
