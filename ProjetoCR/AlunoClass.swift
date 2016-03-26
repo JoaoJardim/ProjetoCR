@@ -24,7 +24,9 @@ class Aluno {
 		self.periodo	= periodo
 		self.crGlobal	= crGlobal
 		self.crPeriodo	= crPeriodo
-	}
+    }
+    
+    // well fazendo verificação 3
 	
 	
 }
