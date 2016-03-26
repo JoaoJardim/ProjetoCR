@@ -26,7 +26,7 @@ class Aluno {
 		self.crPeriodo	= crPeriodo
     }
     
-    // well fazendo verificação
+    // well fazendo verificação 1
 	
 	
 }
