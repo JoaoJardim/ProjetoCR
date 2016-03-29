@@ -54,6 +54,9 @@ public class Criterio {
 	}
 	
 	func calculateGrau(graus: [Double]) -> Double{
+		guard(graus.count != self.qtdGraus) else{
+			return 0
+		}
 		return criterioCalculo[self.numero]!(graus)
 	}
 }

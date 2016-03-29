@@ -24,4 +24,8 @@ public class Cursar {
 	public func getDiciplina()->Disciplina{
 		return self.disciplina
 	}
+	
+	public func setGrau(number: Int, nota: Double){
+		self.graus[number] = nota
+	}
 }
