@@ -65,6 +65,17 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		C913205A1CAB1DF60024D9F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9F5F5811CA5D9CA00B27FFD /* AlunoClass.swift */,
+				C9F5F5851CA6458B00B27FFD /* DisciplinaClass.swift */,
+				C9F5F5871CA646DE00B27FFD /* CriterioClass.swift */,
+				C9F5F5891CA6485500B27FFD /* CursarClass.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C9F5F5631CA5CF3B00B27FFD = {
 			isa = PBXGroup;
 			children = (
@@ -90,10 +101,7 @@
 				C9F5F5761CA5CF3C00B27FFD /* Assets.xcassets */,
 				C9F5F5781CA5CF3C00B27FFD /* LaunchScreen.storyboard */,
 				C9F5F57B1CA5CF3C00B27FFD /* Info.plist */,
-				C9F5F5811CA5D9CA00B27FFD /* AlunoClass.swift */,
-				C9F5F5851CA6458B00B27FFD /* DisciplinaClass.swift */,
-				C9F5F5871CA646DE00B27FFD /* CriterioClass.swift */,
-				C9F5F5891CA6485500B27FFD /* CursarClass.swift */,
+				C913205A1CAB1DF60024D9F6 /* Model */,
 				2EB16A721CAB196500427945 /* Controller */,
 			);
 			path = ProjetoCR;
