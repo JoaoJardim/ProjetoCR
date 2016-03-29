@@ -99,7 +99,7 @@ private func crit6(graus:[Double])->Double {
 		return (graus[0] + graus[1] + graus[3] * 2) / 4
 	}
 	return (graus[0] + graus[1] + graus[2] - graus.minElement()!) / 2
-} // critério chato! - revisarr
+} // critério chato! - revisar
 private func crit7(graus:[Double])->Double {
 	if (graus[0] >= 3 && graus[1] >= 3 && (graus[0] + graus[1]) / 2 >= 6) {
 		return (graus[0] + graus[1]) / 2
