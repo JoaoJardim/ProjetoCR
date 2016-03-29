@@ -9,26 +9,40 @@
 import Foundation
 
 class Aluno {
-	private var matricula:	String
-//	private var email:		String
-	private var senha:		String
-	private var nome:		String
-	private var periodo:	Int
-	private var crGlobal:	Double
-	private var crPeriodo:	Double
+	private var email:				String
+	private var matricula:			String
+	private var senha:				String
+	private var nome:				String
+	private var periodo:			Int
+	private var crGlobal:			Double
+	private var crPeriodo:			Double
+	private var materiasPeriodo:	[Cursar]
 	
-	init(matricula: String, senha: String, nome: String, periodo: Int, crGlobal: Double, crPeriodo: Double){
+	init(email: String, matricula: String, senha: String, nome: String, periodo: Int, crGlobal: Double, crPeriodo: Double){
+		self.email		= email
 		self.matricula	= matricula
 		self.senha		= senha
 		self.nome		= nome
 		self.periodo	= periodo
 		self.crGlobal	= crGlobal
 		self.crPeriodo	= crPeriodo
+		materiasPeriodo = []
     }
-    
-    // well fazendo verificação 3
-	//wel aprendeu a usar git
-    // joao lindao
 	
+	func addMateria(materia: Cursar){
+		self.materiasPeriodo.append(materia)
+	}
+	
+	func clearMaterias(){
+		self.materiasPeriodo.removeAll()
+	}
+	
+	func simulateCRPeriodo() -> Double{
+		return 0
+	}
+	
+	func getCrGlobal() -> Double{
+		return 0
+	}
 	
 }
