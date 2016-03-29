@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Criterio {
+public class Criterio {
 	private var numero:		Int
 	private var qtdGraus:	Int
 	
@@ -74,32 +74,32 @@ private func crit3(graus:[Double])->Double {
 	return (graus[0] + graus[1]) / 2
 }
 private func crit4(graus:[Double])->Double {
-	if (graus[0] >= 3 && graus[1] >= 3 && graus[2] >= 3 && (graus[0] + graus[1] + graus[2]) / 3 >= 5) {
+	if (graus[0] > 3 && graus[1] > 3 && graus[2] > 3 && (graus[0] + graus[1] + graus[2]) / 3 >= 5) {
 		return (graus[0] + graus[1] + graus[2]) / 3
 	}
 	if (graus[3] > 3) {
 		return (graus[0] + graus[1] + graus[2] + graus[3] - graus.minElement()!) / 3
 	}
 	return (graus[0] + graus[1] + graus[2] + graus[3] * 3) / 6
-} // critério chato! - revisar
+}
 private func crit5(graus:[Double])->Double {
-	if (graus[0] >= 5 && graus[1] >= 5 && graus[2]>=5 || (graus[0] + graus[1] + graus[2]) / 3 >= 6) {
+	if (graus[0] > 5 && graus[1] > 5 && graus[2]>5 || (graus[0] + graus[1] + graus[2]) / 3 >= 6) {
 		return (graus[0]+graus[1]+graus[2])/3
 	}
 	if graus[3] > 3 {
 		return (graus[0]+graus[1]+graus[2]+graus[3]-graus.minElement()!)/3
 	}
 	return (graus[0]+graus[1]+graus[2]+graus[3]*3)/6
-} // critério chato! - revisar
+}
 private func crit6(graus:[Double])->Double {
-	if (graus[0] >= 3 && graus[1] >= 3 && (graus[0] + graus[1]) / 2 >= 5) {
+	if (graus[0] >= 3 && graus[1] >= 3 && (graus[0] + graus[1]) / 2 > 5) {
 		return (graus[0]+graus[1])/2
 	}
 	if (graus[3] <= 3) {
 		return (graus[0] + graus[1] + graus[3] * 2) / 4
 	}
 	return (graus[0] + graus[1] + graus[2] - graus.minElement()!) / 2
-} // critério chato! - revisar
+}
 private func crit7(graus:[Double])->Double {
 	if (graus[0] >= 3 && graus[1] >= 3 && (graus[0] + graus[1]) / 2 >= 6) {
 		return (graus[0] + graus[1]) / 2
