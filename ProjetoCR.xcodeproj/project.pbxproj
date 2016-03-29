@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EB16A691CAB181C00427945 /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A681CAB181C00427945 /* InicioController.swift */; };
+		2EB16A6B1CAB183300427945 /* SobreCRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A6A1CAB183300427945 /* SobreCRController.swift */; };
+		2EB16A6D1CAB184400427945 /* HistoricoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A6C1CAB184400427945 /* HistoricoController.swift */; };
+		2EB16A6F1CAB185E00427945 /* MeuPeriodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A6E1CAB185E00427945 /* MeuPeriodoController.swift */; };
+		2EB16A711CAB187C00427945 /* ConfigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A701CAB187C00427945 /* ConfigController.swift */; };
 		C9F5F5701CA5CF3B00B27FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5F56F1CA5CF3B00B27FFD /* AppDelegate.swift */; };
 		C9F5F5721CA5CF3B00B27FFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5F5711CA5CF3B00B27FFD /* ViewController.swift */; };
 		C9F5F5751CA5CF3C00B27FFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F5F5731CA5CF3B00B27FFD /* Main.storyboard */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EB16A681CAB181C00427945 /* InicioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
+		2EB16A6A1CAB183300427945 /* SobreCRController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreCRController.swift; sourceTree = "<group>"; };
+		2EB16A6C1CAB184400427945 /* HistoricoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricoController.swift; sourceTree = "<group>"; };
+		2EB16A6E1CAB185E00427945 /* MeuPeriodoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeuPeriodoController.swift; sourceTree = "<group>"; };
+		2EB16A701CAB187C00427945 /* ConfigController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigController.swift; sourceTree = "<group>"; };
 		C9F5F56C1CA5CF3B00B27FFD /* ProjetoCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F5F56F1CA5CF3B00B27FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9F5F5711CA5CF3B00B27FFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +53,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EB16A721CAB196500427945 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2EB16A6C1CAB184400427945 /* HistoricoController.swift */,
+				2EB16A6E1CAB185E00427945 /* MeuPeriodoController.swift */,
+				2EB16A681CAB181C00427945 /* InicioController.swift */,
+				2EB16A6A1CAB183300427945 /* SobreCRController.swift */,
+				2EB16A701CAB187C00427945 /* ConfigController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		C9F5F5631CA5CF3B00B27FFD = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +94,7 @@
 				C9F5F5851CA6458B00B27FFD /* DisciplinaClass.swift */,
 				C9F5F5871CA646DE00B27FFD /* CriterioClass.swift */,
 				C9F5F5891CA6485500B27FFD /* CursarClass.swift */,
+				2EB16A721CAB196500427945 /* Controller */,
 			);
 			path = ProjetoCR;
 			sourceTree = "<group>";
@@ -149,9 +172,14 @@
 			files = (
 				C9F5F58A1CA6485500B27FFD /* CursarClass.swift in Sources */,
 				C9F5F5721CA5CF3B00B27FFD /* ViewController.swift in Sources */,
+				2EB16A691CAB181C00427945 /* InicioController.swift in Sources */,
 				C9F5F5821CA5D9CA00B27FFD /* AlunoClass.swift in Sources */,
+				2EB16A6D1CAB184400427945 /* HistoricoController.swift in Sources */,
+				2EB16A711CAB187C00427945 /* ConfigController.swift in Sources */,
+				2EB16A6F1CAB185E00427945 /* MeuPeriodoController.swift in Sources */,
 				C9F5F5881CA646DE00B27FFD /* CriterioClass.swift in Sources */,
 				C9F5F5861CA6458B00B27FFD /* DisciplinaClass.swift in Sources */,
+				2EB16A6B1CAB183300427945 /* SobreCRController.swift in Sources */,
 				C9F5F5701CA5CF3B00B27FFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
