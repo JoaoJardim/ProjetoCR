@@ -65,6 +65,13 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		2EB16A731CAC2B1900427945 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		C913205A1CAB1DF60024D9F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +109,7 @@
 				C9F5F5781CA5CF3C00B27FFD /* LaunchScreen.storyboard */,
 				C9F5F57B1CA5CF3C00B27FFD /* Info.plist */,
 				C913205A1CAB1DF60024D9F6 /* Model */,
+				2EB16A731CAC2B1900427945 /* View */,
 				2EB16A721CAB196500427945 /* Controller */,
 			);
 			path = ProjetoCR;
