@@ -8,7 +8,7 @@
         <!--login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="login" id="BYZ-38-t0r" customClass="ViewController" customModule="ProjetoCR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="login" id="BYZ-38-t0r" customClass="LoginController" customModule="ProjetoCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,7 +29,7 @@
         <!--cadastro-->
         <scene sceneID="KsW-Q3-Le3">
             <objects>
-                <viewController title="cadastro" id="oDq-0d-ReM" sceneMemberID="viewController">
+                <viewController title="cadastro" id="oDq-0d-ReM" customClass="CadastroController" customModule="ProjetoCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BxW-3b-qzL"/>
                         <viewControllerLayoutGuide type="bottom" id="EKH-bd-fd6"/>
@@ -69,7 +69,7 @@
         <!--historico periodo-->
         <scene sceneID="xsJ-Vf-aey">
             <objects>
-                <viewController title="historico periodo" id="lTe-Dg-L9q" sceneMemberID="viewController">
+                <viewController title="historico periodo" id="lTe-Dg-L9q" customClass="HistoricoPeriodoController" customModule="ProjetoCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ate-JW-ZHN"/>
                         <viewControllerLayoutGuide type="bottom" id="o2V-xG-G2S"/>
@@ -108,7 +108,7 @@
         <!--alterar disciplina-->
         <scene sceneID="zah-dF-BTd">
             <objects>
-                <viewController title="alterar disciplina" id="JR2-x1-vhg" sceneMemberID="viewController">
+                <viewController title="alterar disciplina" id="JR2-x1-vhg" customClass="AlterarDisciplinaController" customModule="ProjetoCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PNZ-6g-ivv"/>
                         <viewControllerLayoutGuide type="bottom" id="OlI-ai-3sr"/>
@@ -126,7 +126,7 @@
         <!--nova disciplina-->
         <scene sceneID="BsS-OF-Wiw">
             <objects>
-                <viewController title="nova disciplina" id="TsB-qz-0Hg" sceneMemberID="viewController">
+                <viewController title="nova disciplina" id="TsB-qz-0Hg" customClass="NovaDisciplinaController" customModule="ProjetoCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WAb-zc-B3Y"/>
                         <viewControllerLayoutGuide type="bottom" id="0y3-J8-995"/>
@@ -144,7 +144,7 @@
         <!--oportunidades-->
         <scene sceneID="oGN-j0-XcN">
             <objects>
-                <viewController title="oportunidades" id="Iyv-sk-cGH" sceneMemberID="viewController">
+                <viewController title="oportunidades" id="Iyv-sk-cGH" customClass="OportunidadesController" customModule="ProjetoCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jbq-1L-yHi"/>
                         <viewControllerLayoutGuide type="bottom" id="X2l-1v-gEJ"/>
