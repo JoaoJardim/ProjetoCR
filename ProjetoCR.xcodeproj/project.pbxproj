@@ -10,6 +10,8 @@
 		2E0F76941CADA7AE00391D37 /* LANENAR_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0F76911CADA7AE00391D37 /* LANENAR_.ttf */; };
 		2E0F76951CADA7AE00391D37 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0F76921CADA7AE00391D37 /* ColorPalette.swift */; };
 		2E0F76961CADA7AE00391D37 /* gradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0F76931CADA7AE00391D37 /* gradientView.swift */; };
+		2E0F76991CADC94A00391D37 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0F76981CADC94A00391D37 /* Global.swift */; };
+		2E0F769B1CADDB0900391D37 /* BurguerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0F769A1CADDB0900391D37 /* BurguerView.swift */; };
 		2EB16A691CAB181C00427945 /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A681CAB181C00427945 /* InicioController.swift */; };
 		2EB16A6B1CAB183300427945 /* SobreCRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A6A1CAB183300427945 /* SobreCRController.swift */; };
 		2EB16A6D1CAB184400427945 /* HistoricoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A6C1CAB184400427945 /* HistoricoController.swift */; };
@@ -47,6 +49,8 @@
 		2E0F76911CADA7AE00391D37 /* LANENAR_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LANENAR_.ttf; sourceTree = "<group>"; };
 		2E0F76921CADA7AE00391D37 /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		2E0F76931CADA7AE00391D37 /* gradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gradientView.swift; sourceTree = "<group>"; };
+		2E0F76981CADC94A00391D37 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		2E0F769A1CADDB0900391D37 /* BurguerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurguerView.swift; sourceTree = "<group>"; };
 		2EB16A681CAB181C00427945 /* InicioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
 		2EB16A6A1CAB183300427945 /* SobreCRController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreCRController.swift; sourceTree = "<group>"; };
 		2EB16A6C1CAB184400427945 /* HistoricoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricoController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 				2E0F76911CADA7AE00391D37 /* LANENAR_.ttf */,
 				2E0F76921CADA7AE00391D37 /* ColorPalette.swift */,
 				2E0F76931CADA7AE00391D37 /* gradientView.swift */,
+				2E0F76981CADC94A00391D37 /* Global.swift */,
 			);
 			name = Resourcess;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 		C9F5F5631CA5CF3B00B27FFD = {
 			isa = PBXGroup;
 			children = (
+				2E0F769A1CADDB0900391D37 /* BurguerView.swift */,
 				C9F5F56E1CA5CF3B00B27FFD /* ProjetoCR */,
 				C9F5F56D1CA5CF3B00B27FFD /* Products */,
 			);
@@ -260,6 +266,7 @@
 				C9F5F58A1CA6485500B27FFD /* CursarClass.swift in Sources */,
 				C9F5F5721CA5CF3B00B27FFD /* ViewController.swift in Sources */,
 				2E0F76961CADA7AE00391D37 /* gradientView.swift in Sources */,
+				2E0F769B1CADDB0900391D37 /* BurguerView.swift in Sources */,
 				2EB16A691CAB181C00427945 /* InicioController.swift in Sources */,
 				2EB16A7F1CAC52E300427945 /* AlterarDisciplinaView.swift in Sources */,
 				2EB16A811CAC52F600427945 /* NovaDisciplinaView.swift in Sources */,
@@ -280,6 +287,7 @@
 				2EB16A9F1CAC579900427945 /* NovaDisciplinaController.swift in Sources */,
 				C9F5F5881CA646DE00B27FFD /* CriterioClass.swift in Sources */,
 				2EB16A831CAC530E00427945 /* InicioView.swift in Sources */,
+				2E0F76991CADC94A00391D37 /* Global.swift in Sources */,
 				2E0F76951CADA7AE00391D37 /* ColorPalette.swift in Sources */,
 				C9F5F5861CA6458B00B27FFD /* DisciplinaClass.swift in Sources */,
 				2EB16A951CAC551D00427945 /* ConfigView.swift in Sources */,
