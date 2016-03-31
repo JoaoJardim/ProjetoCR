@@ -15,34 +15,62 @@ class LoginView: UIView {
         NSFontAttributeName : UIFont(name: "Lane - Narrow", size: 24)! // Note the !
     ]
     
-    let screenSize:CGRect = UIScreen.mainScreen().bounds
-    var usernameTextfield: UITextField!
-    var passwordTextfield: UITextField!
-    var enterButton: UIButton!
-    var signUpButton: UIButton!
+    var usernameTextfield: UITextField = UITextField()
+    var passwordTextfield: UITextField = UITextField()
+    var enterButton: UIButton = UIButton()
+    var signUpButton: UIButton = UIButton()
+    let background: GradientView = GradientView()
+    
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//    }
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.addCustomView()
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        }
+   
+
+    func addCustomView() {
         
-        usernameTextfield.frame = CGRectMake(screenSize.width*0.0603865, screenSize.height*0.372283, screenSize.width*0.785024, screenSize.width*0.785024) // como que faz pra usar view.height/width???????
-        usernameTextfield.attributedPlaceholder = NSAttributedString(string: "e-mail", attributes:attributes)
+        background.frame = CGRectMake(0, 0, frame.width, frame.height)
+        background.colors = [UIColor.azul(), UIColor.laranja()]
+        self.addSubview(background)
+        
+        usernameTextfield.frame = CGRectMake(self.frame.width*0.0666667, self.frame.height*0.410795, self.frame.width*0.866667, self.frame.height*0.09)  // como que faz pra usar view.height/width???????
+        usernameTextfield.textColor = UIColor.whiteColor()
+        usernameTextfield.attributedPlaceholder = NSAttributedString(string: "e-mail", attributes: attributes)
         usernameTextfield.borderStyle = UITextBorderStyle.None
         usernameTextfield.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
+        usernameTextfield.textAlignment = .Center
+        self.addSubview(usernameTextfield)
         
-        passwordTextfield.frame = CGRectMake(screenSize.width*0.0603865, screenSize.height*0.460598, screenSize.width*0.785024, screenSize.width*0.785024)
-        passwordTextfield.attributedPlaceholder = NSAttributedString(string: "senha", attributes:attributes)
+        passwordTextfield.frame = CGRectMake(self.frame.width*0.067, self.frame.height*0.508, self.frame.width*0.867, self.frame.height*0.09)
+        usernameTextfield.textColor = UIColor.whiteColor()
+        passwordTextfield.attributedPlaceholder = NSAttributedString(string: "senha", attributes: attributes)
         passwordTextfield.borderStyle = UITextBorderStyle.None
         passwordTextfield.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
-        
-        enterButton.frame = CGRectMake(screenSize.width*0.0603865, screenSize.height*0.548913, screenSize.width*0.785024, screenSize.width*0.785024)
+        passwordTextfield.textAlignment = .Center
+        self.addSubview(passwordTextfield)
+
+        enterButton.frame = CGRectMake(self.frame.width*0.067, self.frame.height*0.606, self.frame.width*0.867, self.frame.height*0.09)
         enterButton.backgroundColor = UIColor.whiteColor()
+        enterButton.setTitle("entrar", forState: UIControlState.Normal)
         enterButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: 24)
-        enterButton.titleLabel!.textColor = UIColor.init(red: 216, green: 142, blue: 80, alpha: 1.0) //CRIAR UMA UICOLOR EXTENSION PRA PALETA DE CORES DO APP
-        
-        
-        }
-    
-    
+        enterButton.setTitleColor(UIColor.laranja(), forState: UIControlState.Normal)
+        self.addSubview(enterButton)
+
+    }
     
 //    let sampleTextField = UITextField(frame: CGRectMake(20, 100, 300, 40))
 //    sampleTextField.placeholder = "Enter text here"

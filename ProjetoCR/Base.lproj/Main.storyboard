@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fgp-8v-IVg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -47,7 +47,6 @@
         <!--historico-->
         <scene sceneID="iLx-Vt-LSV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kqo-Wv-dJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="historico" id="zGm-eR-3Tw" customClass="HistoricoController" customModule="ProjetoCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ewk-Wo-g3k"/>
@@ -63,6 +62,7 @@
                         <segue destination="lTe-Dg-L9q" kind="show" id="g0B-1x-MEb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqo-Wv-dJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2965" y="-1477"/>
         </scene>

@@ -10,6 +10,29 @@ import UIKit
 
 class CadastroView: UIView {
 
+    let attributes = [
+        NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSFontAttributeName : UIFont(name: "Lane - Narrow", size: 24)! // Note the !
+    ]
+    
+    var emailTextField: UITextField = UITextField()
+    var matriculaTextField: UITextField = UITextField()
+    
+    
+    
+    let background: GradientView = GradientView()
+    
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        self.addCustomView()
+//    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

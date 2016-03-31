@@ -10,8 +10,12 @@ import UIKit
 
 class LoginController: UIViewController {
 
+    var login_View: LoginView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        login_View = LoginView(frame: self.view.frame)
+        self.view.addSubview(login_View)
 
         // Do any additional setup after loading the view.
     }
@@ -19,7 +23,8 @@ class LoginController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+        
+            }
     
 
     /*
