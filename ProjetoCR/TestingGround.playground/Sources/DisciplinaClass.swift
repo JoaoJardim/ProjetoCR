@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Disciplina {
+public class Disciplina {
 	// MARK: Atributes
 	private var nome:			String
 	private var qtdCreditos:	Int
@@ -16,14 +16,14 @@ class Disciplina {
 	private var criterio:		Criterio
 	
 	// MARK: Methods
-	init(nome: String, qtdCreditos: Int, codigo: String, criterio: Int){
+	public init(nome: String, qtdCreditos: Int, codigo: String, criterio: Int){
 		self.nome			= nome
 		self.qtdCreditos	= qtdCreditos
 		self.codigo			= codigo
 		self.criterio		= Criterio(numero: criterio)
 	}
 	
-	func getNome() -> String{
+	public func getNome() -> String{
 		return nome
 	}
 	

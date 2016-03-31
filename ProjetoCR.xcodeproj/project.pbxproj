@@ -63,6 +63,7 @@
 		2EB16A9C1CAC577A00427945 /* AlterarDisciplinaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterarDisciplinaController.swift; sourceTree = "<group>"; };
 		2EB16A9E1CAC579900427945 /* NovaDisciplinaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovaDisciplinaController.swift; sourceTree = "<group>"; };
 		2EB16AA01CAC57C700427945 /* OportunidadesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OportunidadesController.swift; sourceTree = "<group>"; };
+		C97EA2681CACD39A006FD481 /* TestingGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGround.playground; sourceTree = "<group>"; };
 		C9F5F56C1CA5CF3B00B27FFD /* ProjetoCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F5F56F1CA5CF3B00B27FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9F5F5711CA5CF3B00B27FFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,9 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				C9F5F5811CA5D9CA00B27FFD /* AlunoClass.swift */,
-				C9F5F5851CA6458B00B27FFD /* DisciplinaClass.swift */,
 				C9F5F5871CA646DE00B27FFD /* CriterioClass.swift */,
 				C9F5F5891CA6485500B27FFD /* CursarClass.swift */,
+				C9F5F5851CA6458B00B27FFD /* DisciplinaClass.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -159,6 +160,7 @@
 				C9F5F5761CA5CF3C00B27FFD /* Assets.xcassets */,
 				C9F5F5781CA5CF3C00B27FFD /* LaunchScreen.storyboard */,
 				C9F5F57B1CA5CF3C00B27FFD /* Info.plist */,
+				C97EA2681CACD39A006FD481 /* TestingGround.playground */,
 				C913205A1CAB1DF60024D9F6 /* Model */,
 				2EB16A731CAC2B1900427945 /* View */,
 				2EB16A721CAB196500427945 /* Controller */,

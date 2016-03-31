@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Aluno {
+public class Aluno {
 	// MARK: Atributes
 	private var faculdade:				String
 	private var matricula:				String
@@ -19,7 +19,7 @@ class Aluno {
 	private var disciplinasCursadas:	[Cursar]
 	
 	// MARK: Methods
-	init(faculdade: String, matricula: String, senha: String, nome: String, crGlobal: Double){
+	public init(faculdade: String, matricula: String, senha: String, nome: String, crGlobal: Double){
 		self.faculdade			= faculdade
 		self.matricula			= matricula
 		self.senha				= senha
@@ -27,13 +27,13 @@ class Aluno {
 		self.semestreDeEntrada	= Int(matricula.substringToIndex(matricula.endIndex.advancedBy(-4)))!
 		self.crGlobal			= crGlobal
 		disciplinasCursadas		= []
-	}
+    }
 	
-	func addDisciplina(disciplina: Cursar){
+	public func addDisciplina(disciplina: Cursar){
 		self.disciplinasCursadas.append(disciplina)
 	}
 	
-	func removeDisciplina(disciplina: Cursar){
+	public func removeDisciplina(disciplina: Cursar){
 		for i in 0...disciplinasCursadas.count-1 {
 			if disciplinasCursadas[i].getDisciplina().getNome() == disciplina.getDisciplina().getNome() {
 				disciplinasCursadas.removeAtIndex(i)
@@ -41,7 +41,7 @@ class Aluno {
 		}
 	}
 	
-	func getDisciplinasSemestre(semestre: Int) -> [Cursar]{
+	public func getDisciplinasSemestre(semestre: Int) -> [Cursar]{
 		var disciplinasSemestre: [Cursar] = []
 		
 		for disciplina in disciplinasCursadas {
@@ -53,7 +53,7 @@ class Aluno {
 		return disciplinasSemestre
 	}
 	
-	func calculateCRofSemestre(semestre: Int) -> Double{
+	public func calculateCRofSemestre(semestre: Int) -> Double{
 		
 		var qtdCreditosPeriodo: Int		= 0
 		var totalCreditoGrau:	Double	= 0
@@ -68,11 +68,11 @@ class Aluno {
 		return totalCreditoGrau/Double(qtdCreditosPeriodo)
 	}
 	
-	func getCrGlobal() -> Double{
+	public func getCrGlobal() -> Double{
 		return crGlobal
 	}
 	
-	func simulateNextCRGlobal(semestreSendoCursado: Int) -> Double{
+	public func simulateNextCRGlobal(semestreSendoCursado: Int) -> Double{
 		var qtdCreditosCursados:	Int = 0
 		var qtqCreditosCursando:	Int = 0
 		var newCR:					Double
