@@ -10,9 +10,13 @@ import UIKit
 
 class CadastroController: UIViewController {
 
+    var cadastro_View: CadastroView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        cadastro_View = CadastroView(frame: self.view.frame)
+        self.view.addSubview(cadastro_View)
         // Do any additional setup after loading the view.
     }
 

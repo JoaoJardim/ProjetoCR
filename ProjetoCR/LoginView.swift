@@ -39,7 +39,6 @@ class LoginView: UIView {
 //    required init?(coder aDecoder: NSCoder) {
 //        super.init(coder: aDecoder)
 //        }
-   
 
     func addCustomView() {
         
