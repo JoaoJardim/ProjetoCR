@@ -12,6 +12,23 @@
 		2EB16A6D1CAB184400427945 /* HistoricoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A6C1CAB184400427945 /* HistoricoController.swift */; };
 		2EB16A6F1CAB185E00427945 /* MeuPeriodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A6E1CAB185E00427945 /* MeuPeriodoController.swift */; };
 		2EB16A711CAB187C00427945 /* ConfigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A701CAB187C00427945 /* ConfigController.swift */; };
+		2EB16A751CAC520900427945 /* CadastroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A741CAC520900427945 /* CadastroView.swift */; };
+		2EB16A771CAC523500427945 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A761CAC523500427945 /* LoginView.swift */; };
+		2EB16A791CAC524300427945 /* HistoricoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A781CAC524300427945 /* HistoricoView.swift */; };
+		2EB16A7B1CAC526100427945 /* HistoricoPeriodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A7A1CAC526100427945 /* HistoricoPeriodoView.swift */; };
+		2EB16A7D1CAC528B00427945 /* MeuPeriodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A7C1CAC528B00427945 /* MeuPeriodoView.swift */; };
+		2EB16A7F1CAC52E300427945 /* AlterarDisciplinaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A7E1CAC52E300427945 /* AlterarDisciplinaView.swift */; };
+		2EB16A811CAC52F600427945 /* NovaDisciplinaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A801CAC52F600427945 /* NovaDisciplinaView.swift */; };
+		2EB16A831CAC530E00427945 /* InicioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A821CAC530E00427945 /* InicioView.swift */; };
+		2EB16A851CAC535E00427945 /* SobreCRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A841CAC535E00427945 /* SobreCRView.swift */; };
+		2EB16A871CAC536B00427945 /* OportunidadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A861CAC536B00427945 /* OportunidadesView.swift */; };
+		2EB16A951CAC551D00427945 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A941CAC551D00427945 /* ConfigView.swift */; };
+		2EB16A971CAC573700427945 /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A961CAC573700427945 /* CadastroController.swift */; };
+		2EB16A991CAC574300427945 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A981CAC574300427945 /* LoginController.swift */; };
+		2EB16A9B1CAC576300427945 /* HistoricoPeriodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A9A1CAC576300427945 /* HistoricoPeriodoController.swift */; };
+		2EB16A9D1CAC577A00427945 /* AlterarDisciplinaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A9C1CAC577A00427945 /* AlterarDisciplinaController.swift */; };
+		2EB16A9F1CAC579900427945 /* NovaDisciplinaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A9E1CAC579900427945 /* NovaDisciplinaController.swift */; };
+		2EB16AA11CAC57C700427945 /* OportunidadesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16AA01CAC57C700427945 /* OportunidadesController.swift */; };
 		C9F5F5701CA5CF3B00B27FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5F56F1CA5CF3B00B27FFD /* AppDelegate.swift */; };
 		C9F5F5721CA5CF3B00B27FFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5F5711CA5CF3B00B27FFD /* ViewController.swift */; };
 		C9F5F5751CA5CF3C00B27FFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F5F5731CA5CF3B00B27FFD /* Main.storyboard */; };
@@ -57,13 +74,37 @@
 		2EB16A721CAB196500427945 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2EB16A961CAC573700427945 /* CadastroController.swift */,
+				2EB16A981CAC574300427945 /* LoginController.swift */,
 				2EB16A6C1CAB184400427945 /* HistoricoController.swift */,
+				2EB16A9A1CAC576300427945 /* HistoricoPeriodoController.swift */,
 				2EB16A6E1CAB185E00427945 /* MeuPeriodoController.swift */,
+				2EB16A9C1CAC577A00427945 /* AlterarDisciplinaController.swift */,
+				2EB16A9E1CAC579900427945 /* NovaDisciplinaController.swift */,
 				2EB16A681CAB181C00427945 /* InicioController.swift */,
+				2EB16AA01CAC57C700427945 /* OportunidadesController.swift */,
 				2EB16A6A1CAB183300427945 /* SobreCRController.swift */,
 				2EB16A701CAB187C00427945 /* ConfigController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		2EB16A731CAC2B1900427945 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EB16A741CAC520900427945 /* CadastroView.swift */,
+				2EB16A761CAC523500427945 /* LoginView.swift */,
+				2EB16A781CAC524300427945 /* HistoricoView.swift */,
+				2EB16A7A1CAC526100427945 /* HistoricoPeriodoView.swift */,
+				2EB16A7C1CAC528B00427945 /* MeuPeriodoView.swift */,
+				2EB16A7E1CAC52E300427945 /* AlterarDisciplinaView.swift */,
+				2EB16A801CAC52F600427945 /* NovaDisciplinaView.swift */,
+				2EB16A821CAC530E00427945 /* InicioView.swift */,
+				2EB16A861CAC536B00427945 /* OportunidadesView.swift */,
+				2EB16A841CAC535E00427945 /* SobreCRView.swift */,
+				2EB16A941CAC551D00427945 /* ConfigView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		C913205A1CAB1DF60024D9F6 /* Model */ = {
@@ -103,6 +144,7 @@
 				C9F5F5781CA5CF3C00B27FFD /* LaunchScreen.storyboard */,
 				C9F5F57B1CA5CF3C00B27FFD /* Info.plist */,
 				C913205A1CAB1DF60024D9F6 /* Model */,
+				2EB16A731CAC2B1900427945 /* View */,
 				2EB16A721CAB196500427945 /* Controller */,
 				C913205B1CAB1E4D0024D9F6 /* TestingGround.playground */,
 			);
@@ -183,12 +225,29 @@
 				C9F5F58A1CA6485500B27FFD /* CursarClass.swift in Sources */,
 				C9F5F5721CA5CF3B00B27FFD /* ViewController.swift in Sources */,
 				2EB16A691CAB181C00427945 /* InicioController.swift in Sources */,
+				2EB16A7F1CAC52E300427945 /* AlterarDisciplinaView.swift in Sources */,
+				2EB16A811CAC52F600427945 /* NovaDisciplinaView.swift in Sources */,
+				2EB16A7D1CAC528B00427945 /* MeuPeriodoView.swift in Sources */,
+				2EB16A9B1CAC576300427945 /* HistoricoPeriodoController.swift in Sources */,
+				2EB16A7B1CAC526100427945 /* HistoricoPeriodoView.swift in Sources */,
+				2EB16A871CAC536B00427945 /* OportunidadesView.swift in Sources */,
+				2EB16A851CAC535E00427945 /* SobreCRView.swift in Sources */,
 				C9F5F5821CA5D9CA00B27FFD /* AlunoClass.swift in Sources */,
 				2EB16A6D1CAB184400427945 /* HistoricoController.swift in Sources */,
+				2EB16A791CAC524300427945 /* HistoricoView.swift in Sources */,
+				2EB16A751CAC520900427945 /* CadastroView.swift in Sources */,
+				2EB16A991CAC574300427945 /* LoginController.swift in Sources */,
+				2EB16A971CAC573700427945 /* CadastroController.swift in Sources */,
 				2EB16A711CAB187C00427945 /* ConfigController.swift in Sources */,
+				2EB16AA11CAC57C700427945 /* OportunidadesController.swift in Sources */,
 				2EB16A6F1CAB185E00427945 /* MeuPeriodoController.swift in Sources */,
+				2EB16A9F1CAC579900427945 /* NovaDisciplinaController.swift in Sources */,
 				C9F5F5881CA646DE00B27FFD /* CriterioClass.swift in Sources */,
+				2EB16A831CAC530E00427945 /* InicioView.swift in Sources */,
 				C9F5F5861CA6458B00B27FFD /* DisciplinaClass.swift in Sources */,
+				2EB16A951CAC551D00427945 /* ConfigView.swift in Sources */,
+				2EB16A771CAC523500427945 /* LoginView.swift in Sources */,
+				2EB16A9D1CAC577A00427945 /* AlterarDisciplinaController.swift in Sources */,
 				2EB16A6B1CAB183300427945 /* SobreCRController.swift in Sources */,
 				C9F5F5701CA5CF3B00B27FFD /* AppDelegate.swift in Sources */,
 			);

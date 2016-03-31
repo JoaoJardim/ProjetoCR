@@ -1,18 +1,17 @@
 //
-//  HomeController.swift
+//  CadastroController.swift
 //  ProjetoCR
 //
-//  Created by Gabrielle Brandenburg dos Anjos on 3/29/16.
+//  Created by Gabrielle Brandenburg dos Anjos on 3/30/16.
 //  Copyright © 2016 João Gabriel Jardim. All rights reserved.
 //
 
 import UIKit
 
-class InicioController: UIViewController {
+class CadastroController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.hidden = true
 
         // Do any additional setup after loading the view.
     }
