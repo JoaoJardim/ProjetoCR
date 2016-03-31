@@ -20,12 +20,4 @@ class Cursar {
 		self.semestre	= semestre
 		self.graus		= [0,0,0,0]
 	}
-	
-	func grauFinal()->Double{
-		return disciplina.calculateGrauFinal(graus)
-	}
-	
-	func creditosDisciplina()->Int{
-		return disciplina.getQtdCreditos()
-	}
 }

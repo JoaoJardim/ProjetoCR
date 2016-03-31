@@ -20,12 +20,4 @@ class Disciplina {
 		self.codigo			= codigo
 		self.criterio		= criterio
 	}
-	
-	func calculateGrauFinal(graus: [Double])->Double{
-		return criterio.calculateGrau(graus)
-	}
-	
-	func getQtdCreditos()->Int{
-		return qtdCreditos
-	}
 }

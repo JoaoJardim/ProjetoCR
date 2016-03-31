@@ -29,6 +29,7 @@
 		2EB16A6C1CAB184400427945 /* HistoricoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricoController.swift; sourceTree = "<group>"; };
 		2EB16A6E1CAB185E00427945 /* MeuPeriodoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeuPeriodoController.swift; sourceTree = "<group>"; };
 		2EB16A701CAB187C00427945 /* ConfigController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigController.swift; sourceTree = "<group>"; };
+		C913205B1CAB1E4D0024D9F6 /* TestingGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGround.playground; sourceTree = "<group>"; };
 		C9F5F56C1CA5CF3B00B27FFD /* ProjetoCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F5F56F1CA5CF3B00B27FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9F5F5711CA5CF3B00B27FFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 				C9F5F57B1CA5CF3C00B27FFD /* Info.plist */,
 				C913205A1CAB1DF60024D9F6 /* Model */,
 				2EB16A721CAB196500427945 /* Controller */,
+				C913205B1CAB1E4D0024D9F6 /* TestingGround.playground */,
 			);
 			path = ProjetoCR;
 			sourceTree = "<group>";

@@ -9,7 +9,8 @@
 import Foundation
 
 class Aluno {
-	private var email:				String
+	// MARK: Atributes
+	private var faculdade:			String
 	private var matricula:			String
 	private var senha:				String
 	private var nome:				String
@@ -18,8 +19,9 @@ class Aluno {
 	private var crPeriodo:			Double
 	private var materiasPeriodo:	[Cursar]
 	
-	init(email: String, matricula: String, senha: String, nome: String, periodo: Int, crGlobal: Double, crPeriodo: Double){
-		self.email		= email
+	// MARK: Methods
+	init(faculdade: String, matricula: String, senha: String, nome: String, periodo: Int, crGlobal: Double, crPeriodo: Double){
+		self.faculdade	= faculdade
 		self.matricula	= matricula
 		self.senha		= senha
 		self.nome		= nome
@@ -33,16 +35,31 @@ class Aluno {
 		self.materiasPeriodo.append(materia)
 	}
 	
-	func clearMaterias(){
-		self.materiasPeriodo.removeAll()
-	}
-	
 	func simulateCRPeriodo() -> Double{
-		return 0
+		var qtdCreditosPeriodo: Int		= 0
+		var totalCreditoGrau:	Double	= 0
+		
+		for materia in materiasPeriodo {
+			qtdCreditosPeriodo	+= materia.creditosDisciplina()
+			totalCreditoGrau	+= materia.grauFinal() * Double(materia.creditosDisciplina())
+		}
+		return totalCreditoGrau/Double(qtdCreditosPeriodo)
 	}
 	
 	func getCrGlobal() -> Double{
-		return 0
+		return crGlobal
 	}
 	
+	func archivePeriodo(){
+		// save them
+		
+		
+		
+		clearMaterias()
+	}
+	
+	// MARK: Internal functions
+	private func clearMaterias(){
+		self.materiasPeriodo.removeAll()
+	}
 }
