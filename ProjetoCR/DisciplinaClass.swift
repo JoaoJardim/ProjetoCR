@@ -9,23 +9,29 @@
 import Foundation
 
 class Disciplina {
+	// MARK: Atributes
 	private var nome:			String
 	private var qtdCreditos:	Int
 	private var codigo:			String
 	private var criterio:		Criterio
 	
-	init(nome: String, qtdCreditos: Int, codigo: String, criterio: Criterio){
+	// MARK: Methods
+	init(nome: String, qtdCreditos: Int, codigo: String, criterio: Int){
 		self.nome			= nome
 		self.qtdCreditos	= qtdCreditos
 		self.codigo			= codigo
-		self.criterio		= criterio
+		self.criterio		= Criterio(numero: criterio)
 	}
 	
-	func calculateGrauFinal(graus: [Double])->Double{
+	func getNome() -> String{
+		return nome
+	}
+	
+	func calculateGrauFinal(graus: [Double]) -> Double{
 		return criterio.calculateGrau(graus)
 	}
 	
-	func getQtdCreditos()->Int{
+	func getQtdCreditos() -> Int{
 		return qtdCreditos
 	}
 }

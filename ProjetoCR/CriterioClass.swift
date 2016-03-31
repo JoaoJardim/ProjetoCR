@@ -9,6 +9,7 @@
 import Foundation
 
 class Criterio {
+	// MARK: Atributes
 	private var numero:		Int
 	private var qtdGraus:	Int
 	
@@ -25,6 +26,7 @@ class Criterio {
 		10:	crit10
 	]
 	
+	// MARK: Methods
 	init(numero: Int){
 		self.numero			= numero
 		switch numero {

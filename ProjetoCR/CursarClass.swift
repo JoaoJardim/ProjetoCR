@@ -9,16 +9,26 @@
 import Foundation
 
 class Cursar {
+	// MARK: Atributes
 	private var aluno:		Aluno
 	private var disciplina:	Disciplina
 	private var semestre:	Int
 	private var graus		= [Double]()
 	
+	// MARK: Methods
 	init(aluno: Aluno, disciplina: Disciplina, semestre: Int){
 		self.aluno		= aluno
 		self.disciplina = disciplina
 		self.semestre	= semestre
-		self.graus		= [0,0,0,0]
+		self.graus		= []
+	}
+	
+	func setGrau(nota: Double){
+		graus.append(nota)
+	}
+	
+	func getDisciplina()->Disciplina{
+		return disciplina
 	}
 	
 	func grauFinal()->Double{
@@ -27,5 +37,9 @@ class Cursar {
 	
 	func creditosDisciplina()->Int{
 		return disciplina.getQtdCreditos()
+	}
+	
+	func getSemestre()->Int{
+		return semestre
 	}
 }

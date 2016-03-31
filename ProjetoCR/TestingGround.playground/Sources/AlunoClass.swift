@@ -8,41 +8,99 @@
 
 import Foundation
 
-class Aluno {
-	private var email:				String
-	private var matricula:			String
-	private var senha:				String
-	private var nome:				String
-	private var periodo:			Int
-	private var crGlobal:			Double
-	private var crPeriodo:			Double
-	private var materiasPeriodo:	[Cursar]
+public class Aluno {
+	// MARK: Atributes
+	private var faculdade:				String
+	private var matricula:				String
+	private var senha:					String
+	private var nome:					String
+	private var semestreDeEntrada:		Int
+	private var crGlobal:				Double
+	private var disciplinasCursadas:	[Cursar]
 	
-	init(email: String, matricula: String, senha: String, nome: String, periodo: Int, crGlobal: Double, crPeriodo: Double){
-		self.email		= email
-		self.matricula	= matricula
-		self.senha		= senha
-		self.nome		= nome
-		self.periodo	= periodo
-		self.crGlobal	= crGlobal
-		self.crPeriodo	= crPeriodo
-		materiasPeriodo = []
+	// MARK: Methods
+	public init(faculdade: String, matricula: String, senha: String, nome: String, crGlobal: Double){
+		self.faculdade			= faculdade
+		self.matricula			= matricula
+		self.senha				= senha
+		self.nome				= nome
+		self.semestreDeEntrada	= Int(matricula.substringToIndex(matricula.endIndex.advancedBy(-4)))!
+		self.crGlobal			= crGlobal
+		disciplinasCursadas		= []
     }
 	
-	func addMateria(materia: Cursar){
-		self.materiasPeriodo.append(materia)
+	public func addDisciplina(disciplina: Cursar){
+		self.disciplinasCursadas.append(disciplina)
 	}
 	
-	func clearMaterias(){
-		self.materiasPeriodo.removeAll()
+	public func removeDisciplina(disciplina: Cursar){
+		for i in 0...disciplinasCursadas.count-1 {
+			if disciplinasCursadas[i].getDisciplina().getNome() == disciplina.getDisciplina().getNome() {
+				disciplinasCursadas.removeAtIndex(i)
+			}
+		}
 	}
 	
-	func simulateCRPeriodo() -> Double{
-		return 0
+	public func getDisciplinasSemestre(semestre: Int) -> [Cursar]{
+		var disciplinasSemestre: [Cursar] = []
+		
+		for disciplina in disciplinasCursadas {
+			if disciplina.getSemestre() == semestre {
+				disciplinasSemestre.append(disciplina)
+			}
+		}
+		
+		return disciplinasSemestre
 	}
 	
-	func getCrGlobal() -> Double{
-		return 0
+	public func calculateCRofSemestre(semestre: Int) -> Double{
+		
+		var qtdCreditosPeriodo: Int		= 0
+		var totalCreditoGrau:	Double	= 0
+		
+		for disciplina in disciplinasCursadas {
+			if disciplina.getSemestre() == semestre {
+				qtdCreditosPeriodo	+= disciplina.creditosDisciplina()
+				totalCreditoGrau	+= disciplina.grauFinal() * Double(disciplina.creditosDisciplina())
+			}
+		}
+		
+		return totalCreditoGrau/Double(qtdCreditosPeriodo)
 	}
 	
+	public func getCrGlobal() -> Double{
+		return crGlobal
+	}
+	
+	public func simulateNextCRGlobal(semestreSendoCursado: Int) -> Double{
+		var qtdCreditosCursados:	Int = 0
+		var qtqCreditosCursando:	Int = 0
+		var newCR:					Double
+		
+		for disciplina in disciplinasCursadas {
+			if disciplina.getSemestre() == semestreSendoCursado {
+				qtqCreditosCursando += disciplina.creditosDisciplina()
+			}
+			else if disciplina.getSemestre() < semestreSendoCursado {
+				qtdCreditosCursados += disciplina.creditosDisciplina()
+			}
+		}
+		
+		newCR = (Double(qtdCreditosCursados) * getCrGlobal() + Double(qtqCreditosCursando) * calculateCRofSemestre(semestreSendoCursado)) / Double(qtdCreditosCursados + qtqCreditosCursando)
+		
+		return newCR
+	}
+	
+	func archivePeriodo(){
+		// save them
+		
+		
+		
+		clearDisciplinas()
+	}
+	
+	// MARK: Internal functions
+	private func clearDisciplinas(){
+		self.disciplinasCursadas.removeAll()
+	}
 }

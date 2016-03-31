@@ -8,16 +8,38 @@
 
 import Foundation
 
-class Cursar {
+public class Cursar {
+	// MARK: Atributes
 	private var aluno:		Aluno
 	private var disciplina:	Disciplina
 	private var semestre:	Int
 	private var graus		= [Double]()
 	
-	init(aluno: Aluno, disciplina: Disciplina, semestre: Int){
+	// MARK: Methods
+	public init(aluno: Aluno, disciplina: Disciplina, semestre: Int){
 		self.aluno		= aluno
 		self.disciplina = disciplina
 		self.semestre	= semestre
-		self.graus		= [0,0,0,0]
+		self.graus		= []
+	}
+	
+	public func setGrau(nota: Double){
+		graus.append(nota)
+	}
+	
+	public func getDisciplina()->Disciplina{
+		return disciplina
+	}
+	
+	func grauFinal()->Double{
+		return disciplina.calculateGrauFinal(graus)
+	}
+	
+	func creditosDisciplina()->Int{
+		return disciplina.getQtdCreditos()
+	}
+	
+	public func getSemestre()->Int{
+		return semestre
 	}
 }

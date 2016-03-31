@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Criterio {
+public class Criterio {
+	// MARK: Atributes
 	private var numero:		Int
 	private var qtdGraus:	Int
-	
 	private var criterioCalculo: [Int: ([Double])->(Double)] = [
 		1:	crit1,
 		2:	crit2,
@@ -25,7 +25,8 @@ class Criterio {
 		10:	crit10
 	]
 	
-	init(numero: Int){
+	// MARK: Methods
+	public init(numero: Int){
 		self.numero			= numero
 		switch numero {
 		case 1:
