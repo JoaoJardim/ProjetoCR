@@ -21,11 +21,6 @@ class LoginView: UIView {
     var signUpButton: UIButton = UIButton()
     let background: GradientView = GradientView()
     
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//    }
-
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addCustomView()
@@ -34,11 +29,6 @@ class LoginView: UIView {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        }
 
     func addCustomView() {
         
@@ -68,6 +58,13 @@ class LoginView: UIView {
         enterButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: 24)
         enterButton.setTitleColor(UIColor.laranja(), forState: UIControlState.Normal)
         self.addSubview(enterButton)
+        
+        signUpButton.frame = CGRectMake(0.584*self.frame.width,0.712*self.frame.height,0.349*self.frame.width,0.043*self.frame.height)
+        signUpButton.backgroundColor = UIColor.clearColor()
+        signUpButton.setTitle("Cadastre-se", forState: UIControlState.Normal)
+        signUpButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: 24)
+        signUpButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        self.addSubview(signUpButton)
 
     }
     

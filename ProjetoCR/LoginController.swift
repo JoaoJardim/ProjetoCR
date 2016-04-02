@@ -16,6 +16,11 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         login_View = LoginView(frame: self.view.frame)
         self.view.addSubview(login_View)
+        
+        login_View.enterButton.addTarget(self, action: #selector(LoginController.enterButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        login_View.signUpButton.addTarget(self, action: #selector(LoginController.signUpButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
+        
 
         // Do any additional setup after loading the view.
     }
@@ -26,7 +31,25 @@ class LoginController: UIViewController {
         
             }
     
+    func enterButtonPressed() {
+        self.performSegueWithIdentifier("GoToTabBar", sender: self)
+    }
+    
+    func signUpButtonPressed() {
+        self.performSegueWithIdentifier("GoToCadastro", sender: self)
+    }
+    
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "GoToTabBar") {
+            let vc = segue.destinationViewController as! UITabBarController
+            // pass data to next view
+        }
+        if (segue.identifier == "GoToCadastro") {
+            let vc = segue.destinationViewController as! CadastroController
+            // pass data to next view
+        }
+    }
     /*
     // MARK: - Navigation
 

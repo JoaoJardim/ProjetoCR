@@ -14,6 +14,7 @@ class Global {
     
     private static var sharedInstance : Global!
     var fontSize18 : CGFloat!
+    var fontSize72: CGFloat!
     
     private init(){
         

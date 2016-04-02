@@ -10,9 +10,15 @@ import UIKit
 
 class InicioController: UIViewController {
 
-    override func viewDidLoad() {
+    var inicio_View: InicioView!
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.hidden = true
+            inicio_View = InicioView(frame: self.view.frame, CRType: "CR Acumulado", CR: 7.2, simuText: "Simulação - Período atual", decimals: 0.1)
+        self.view.addSubview(inicio_View)
+            
+
 
         // Do any additional setup after loading the view.
     }

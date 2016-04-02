@@ -38,7 +38,7 @@ class CadastroView: UIView {
     
     let background: GradientView = GradientView()
     
-    override init(frame: CGRect) {
+    override init(frame: CGRect ) {
         super.init(frame: frame)
         self.addCustomView()
     }
@@ -69,6 +69,7 @@ class CadastroView: UIView {
         okButton.setTitle("Ok", forState: UIControlState.Normal)
         okButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: 24)
         okButton.setTitleColor(UIColor.laranja(), forState: UIControlState.Normal)
+        //okButton.addTarget(self, action: "okButtonPressed:", forControlEvents: .TouchUpInside)
         self.addSubview(okButton)
         
         cancelButton.frame = CGRectMake(0.544*w,0.862*h,0.392*w,0.09*h)
@@ -89,6 +90,7 @@ class CadastroView: UIView {
         
         emailTextField.frame = CGRectMake(0*w,0.064*h,1*w,0.148*h)
         emailTextField.textColor = UIColor.whiteColor()
+        //emailTextField.text = email
         emailTextField.borderStyle = UITextBorderStyle.None
         emailTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
         emailTextField.textAlignment = .Center
@@ -103,6 +105,7 @@ class CadastroView: UIView {
 
         matriculaTextField.frame = CGRectMake(0*w,0.326*h,1*w,0.148*h)
         matriculaTextField.textColor = UIColor.whiteColor()
+        //matriculaTextField.text = matricula
         matriculaTextField.borderStyle = UITextBorderStyle.None
         matriculaTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
         matriculaTextField.textAlignment = .Center
@@ -116,6 +119,7 @@ class CadastroView: UIView {
         
         cursoTextField.frame = CGRectMake(0*w,0.588*h,1*w,0.148*h)
         cursoTextField.textColor = UIColor.whiteColor()
+        //cursoTextField.text = curso
         cursoTextField.borderStyle = UITextBorderStyle.None
         cursoTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
         cursoTextField.textAlignment = .Center
@@ -130,6 +134,7 @@ class CadastroView: UIView {
         
         passwordTextField.frame = CGRectMake(0*w,0.85*h,1*w,0.148*h)
         passwordTextField.textColor = UIColor.whiteColor()
+        //passwordTextField.text = senha
         passwordTextField.borderStyle = UITextBorderStyle.None
         passwordTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
         passwordTextField.textAlignment = .Center
@@ -144,6 +149,7 @@ class CadastroView: UIView {
         
         confirmPasswordTextField.frame = CGRectMake(0*w,1.112*h,1*w,0.148*h)
         confirmPasswordTextField.textColor = UIColor.whiteColor()
+        //confirmPasswordTextField.text = confsenha
         confirmPasswordTextField.borderStyle = UITextBorderStyle.None
         confirmPasswordTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
         confirmPasswordTextField.textAlignment = .Center

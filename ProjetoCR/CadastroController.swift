@@ -12,6 +12,7 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
 
     var cadastro_View: CadastroView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,9 +23,15 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CadastroController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CadastroController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+        
+        cadastro_View.okButton.addTarget(self, action: #selector(CadastroController.okButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        cadastro_View.cancelButton.addTarget(self, action: #selector(CadastroController.cancelButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
+
 
     }
 
+    
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             print(keyboardSize.origin.y)
@@ -37,12 +44,22 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
         }
         
     }
+    
+    //Função pra pegar as informações do cadastro
+    func okButtonPressed(){
+        self.performSegueWithIdentifier("BackToLogin", sender: self)
+        print("OkButton")
+        
+    }
+    
+    func cancelButtonPressed () {
+        self.performSegueWithIdentifier("BackToLogin", sender: self)
+        print("CancelButton")
+    }
 
     func keyboardWillHide(notification: NSNotification) {
-        
-            cadastro_View.scrollViewCadastro.scrollIndicatorInsets.bottom = 0
+        cadastro_View.scrollViewCadastro.scrollIndicatorInsets.bottom = 0
         cadastro_View.scrollViewCadastro.contentInset.bottom = 0
-
     }
 
 
@@ -59,7 +76,12 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
         view.endEditing(true)
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "BackToLogin") {
+            let vc = segue.destinationViewController as! LoginController
+            // pass data to next view
+        }
+    }
     /*
     func scrollViewDidScroll(scrollView: UIScrollView) {
         view.endEditing(true)
