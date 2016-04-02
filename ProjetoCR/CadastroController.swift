@@ -12,7 +12,6 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
 
     var cadastro_View: CadastroView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +29,6 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
 
 
     }
-
     
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
@@ -45,6 +43,11 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    func keyboardWillHide(notification: NSNotification) {
+        cadastro_View.scrollViewCadastro.scrollIndicatorInsets.bottom = 0
+        cadastro_View.scrollViewCadastro.contentInset.bottom = 0
+    }
+    
     //Função pra pegar as informações do cadastro
     func okButtonPressed(){
         self.performSegueWithIdentifier("BackToLogin", sender: self)
@@ -56,12 +59,6 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
         self.performSegueWithIdentifier("BackToLogin", sender: self)
         print("CancelButton")
     }
-
-    func keyboardWillHide(notification: NSNotification) {
-        cadastro_View.scrollViewCadastro.scrollIndicatorInsets.bottom = 0
-        cadastro_View.scrollViewCadastro.contentInset.bottom = 0
-    }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

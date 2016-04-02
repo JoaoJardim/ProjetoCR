@@ -12,20 +12,28 @@ class InicioController: UIViewController {
 
     var inicio_View: InicioView!
     
-        override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = true
-            inicio_View = InicioView(frame: self.view.frame, CRType: "CR Acumulado", CR: 7.2, simuText: "Simulação - Período atual", decimals: 0.1)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        inicio_View = InicioView(frame: self.view.frame, CRType: "CR Acumulado", CR: 7.2, simuText: "Simulação - Período atual", decimals: 0.1)
         self.view.addSubview(inicio_View)
-            
-
-
+        
+        
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = false
     }
     
 

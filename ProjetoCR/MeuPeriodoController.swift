@@ -10,9 +10,12 @@ import UIKit
 
 class MeuPeriodoController: UIViewController {
 
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.hidden = true
         // Do any additional setup after loading the view.
     }
 

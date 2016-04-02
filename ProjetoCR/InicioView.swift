@@ -8,8 +8,20 @@
 
 import UIKit
 
-class LeftButtonView: UIButton {
+class ArrowButton: UIButton {
     
+    override func drawRect(rect: CGRect) {
+        var leftPath = UIBezierPath()
+        leftPath.lineWidth = 14.6
+        
+        leftPath.moveToPoint(CGPoint(x: 0, y:0))
+        leftPath.addLineToPoint(CGPoint(x:0, y:bounds.height))
+        leftPath.addLineToPoint(CGPoint(x:bounds.width, y:bounds.height))
+        
+        UIColor.whiteColor().colorWithAlphaComponent(0.7).setStroke()
+        leftPath.stroke()
+        
+    }
     
 }
 
@@ -22,8 +34,9 @@ class InicioView: UIView {
     var crView = UIView()
     var simuLabel = UILabel()
     var decimalLabel = UILabel()
-    var rightButton = UIButton()
-    var leftButton = UIButton()
+    var rightButton = ArrowButton()
+    var leftButton = ArrowButton()
+    
     
     init(frame: CGRect, CRType: String, CR: Double, simuText: String, decimals: Double) {
         super.init(frame: frame)
@@ -39,13 +52,20 @@ class InicioView: UIView {
     func addCustomView (CRType: String, CR: Double, simuText: String, decimals: Double) {
         let font72 = 72/667*frame.height
         Global.getSharedInstance().fontSize72 = font72
-        
-        var h = self.frame.height
-        var w = self.frame.width
+        let h = self.frame.height
+        let w = self.frame.width
         
         background.frame = CGRectMake(0, 0, w, h)
         background.colors = [UIColor.azul(), UIColor.laranja()]
         self.addSubview(background)
+        
+        leftButton.frame = CGRectMake(0.112*w,0.418*h,0.109*w,0.063*h) //CGRectMake(0.112*w,0.421*h,0.071*w,0.079*h)
+        leftButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI/4))
+        self.addSubview(leftButton)
+        
+        rightButton.frame = CGRectMake(0.773*w,0.424*h,0.109*w,0.064*h)
+        rightButton.transform = CGAffineTransformMakeRotation(CGFloat(1.25*M_PI))
+        self.addSubview(rightButton)
         
         title.frame = CGRectMake(0*w,0.082*h,1*w,0.064*h)
         title.text = CRType

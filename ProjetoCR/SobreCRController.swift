@@ -10,6 +10,9 @@ import UIKit
 
 class SobreCRController: UIViewController {
 
+    override func viewWillAppear(animated: Bool) {
+         self.navigationController?.navigationBar.hidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
