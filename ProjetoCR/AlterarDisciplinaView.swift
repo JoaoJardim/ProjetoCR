@@ -10,7 +10,7 @@ import UIKit
 
 class AlterarDisciplinaView: UIView {
 
-    init(frame: CGRect, CRType: String, CR: Double, simuText: String, decimals: Double) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         self.drawRect(self.frame)
         self.addCustomView()

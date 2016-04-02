@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().shadowImage = UIImage()
         UITabBar.appearance().backgroundImage = UIImage()
         UITabBar.appearance().backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
-        
+        UITabBar.appearance().tintColor = UIColor.azul()
         return true
 	}
 

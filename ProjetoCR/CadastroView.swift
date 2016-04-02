@@ -29,12 +29,6 @@ class CadastroView: UIView {
     
     var okButton = UIButton()
     var cancelButton = UIButton()
-
-    
-    let attributes = [
-        NSForegroundColorAttributeName: UIColor.whiteColor(),
-        NSFontAttributeName : UIFont(name: "Lane - Narrow", size: 24)! // Note the !
-    ]
     
     let background: GradientView = GradientView()
     
@@ -49,7 +43,15 @@ class CadastroView: UIView {
     
     func addCustomView() {
         let font18 = 18/667*frame.height
+        let font36 = (36/667)*frame.height
+        let font24 = 24/667*frame.height
         Global.getSharedInstance().fontSize18 = font18
+        
+        let attributes = [
+            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName : UIFont(name: "Lane - Narrow", size: font24)! // Note the !
+        ]
+        
         var w = self.frame.width
         var h = self.frame.height
         
@@ -60,22 +62,21 @@ class CadastroView: UIView {
         title.frame = CGRectMake(0*w,0.082*h,1*w,0.064*h)
         title.text = "Cadastro"
         title.textColor = UIColor.whiteColor()
-        title.font = UIFont(name: "Lane - Narrow", size: 36)
+        title.font = UIFont(name: "Lane - Narrow", size: font36)
         title.textAlignment = .Center
         self.addSubview(title)
         
         okButton.frame = CGRectMake(0.069*w,0.862*h,0.392*w,0.09*h)
         okButton.backgroundColor = UIColor.whiteColor()
         okButton.setTitle("Ok", forState: UIControlState.Normal)
-        okButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: 24)
+        okButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: font24)
         okButton.setTitleColor(UIColor.laranja(), forState: UIControlState.Normal)
-        //okButton.addTarget(self, action: "okButtonPressed:", forControlEvents: .TouchUpInside)
         self.addSubview(okButton)
         
         cancelButton.frame = CGRectMake(0.544*w,0.862*h,0.392*w,0.09*h)
         cancelButton.backgroundColor = UIColor.whiteColor()
         cancelButton.setTitle("Cancelar", forState: UIControlState.Normal)
-        cancelButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: 24)
+        cancelButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: font24)
         cancelButton.setTitleColor(UIColor.laranja(), forState: UIControlState.Normal)
         self.addSubview(cancelButton)
         
@@ -84,9 +85,6 @@ class CadastroView: UIView {
         self.addSubview(scrollViewCadastro)
         w = scrollViewCadastro.frame.width
         h = scrollViewCadastro.frame.height
-        
-        
-
         
         emailTextField.frame = CGRectMake(0*w,0.064*h,1*w,0.148*h)
         emailTextField.textColor = UIColor.whiteColor()
@@ -131,7 +129,6 @@ class CadastroView: UIView {
         cursoLabel.font = cursoLabel.font.fontWithSize(font18)
         scrollViewCadastro.addSubview(cursoLabel)
 
-        
         passwordTextField.frame = CGRectMake(0*w,0.85*h,1*w,0.148*h)
         passwordTextField.textColor = UIColor.whiteColor()
         //passwordTextField.text = senha
@@ -146,7 +143,6 @@ class CadastroView: UIView {
         passwordLabel.font = passwordLabel.font.fontWithSize(font18)
         scrollViewCadastro.addSubview(passwordLabel)
 
-        
         confirmPasswordTextField.frame = CGRectMake(0*w,1.112*h,1*w,0.148*h)
         confirmPasswordTextField.textColor = UIColor.whiteColor()
         //confirmPasswordTextField.text = confsenha
@@ -161,8 +157,7 @@ class CadastroView: UIView {
         confirmPasswordLabel.text = "Confirmar Senha"
         confirmPasswordLabel.font = confirmPasswordLabel.font.fontWithSize(font18)
         scrollViewCadastro.addSubview(confirmPasswordLabel)
-
-
+        
         scrollViewCadastro.contentSize = CGSize(width: w, height: confirmPasswordTextField.frame.maxY)
         
     }

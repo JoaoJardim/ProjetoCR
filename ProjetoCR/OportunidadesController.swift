@@ -10,9 +10,12 @@ import UIKit
 
 class OportunidadesController: UIViewController {
 
+    var oportunidades_View: OportunidadesView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        oportunidades_View = OportunidadesView(frame: self.view.frame)
+        self.view.addSubview(oportunidades_View)
         // Do any additional setup after loading the view.
     }
 

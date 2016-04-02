@@ -10,7 +10,10 @@ import UIKit
 
 class HistoricoView: UIView {
 
-    init(frame: CGRect, CRType: String, CR: Double, simuText: String, decimals: Double) {
+    let background: GradientView = GradientView()
+
+    
+    override init(frame: CGRect) {
         super.init(frame: frame)
         self.drawRect(self.frame)
         self.addCustomView()
@@ -22,7 +25,9 @@ class HistoricoView: UIView {
     }
     
     func addCustomView() {
-        
+        background.frame = CGRectMake(0, 0, frame.width, frame.height)
+        background.colors = [UIColor.azul(), UIColor.laranja()]
+        self.addSubview(background)
     }
     
     /*

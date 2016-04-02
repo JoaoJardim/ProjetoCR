@@ -10,9 +10,13 @@ import UIKit
 
 class AlterarDisciplinaController: UIViewController {
 
+    var alterarDisciplina_View: AlterarDisciplinaView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        alterarDisciplina_View = AlterarDisciplinaView(frame: self.view.frame)
+        self.view.addSubview(alterarDisciplina_View)
         // Do any additional setup after loading the view.
     }
 

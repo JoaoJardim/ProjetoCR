@@ -10,9 +10,13 @@ import UIKit
 
 class NovaDisciplinaController: UIViewController {
 
+    var novaDisciplina_View: NovaDisciplinaView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        novaDisciplina_View = NovaDisciplinaView(frame: self.view.frame)
+        self.view.addSubview(novaDisciplina_View)
         // Do any additional setup after loading the view.
     }
 

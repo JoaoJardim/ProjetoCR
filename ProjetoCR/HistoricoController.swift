@@ -9,6 +9,8 @@
 import UIKit
 
 class HistoricoController: UIViewController {
+    
+    var historico_View: HistoricoView!
 
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = true
@@ -16,6 +18,8 @@ class HistoricoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        historico_View = HistoricoView(frame: self.view.frame)
+        self.view.addSubview(historico_View)
 
         // Do any additional setup after loading the view.
     }

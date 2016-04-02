@@ -10,13 +10,16 @@ import UIKit
 
 class ConfigController: UIViewController {
 
+    var config_View: ConfigView!
     override func viewWillAppear(animated: Bool) {
          self.navigationController?.navigationBar.hidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        config_View = ConfigView(frame: self.view.frame)
+        self.view.addSubview(config_View)
 
         // Do any additional setup after loading the view.
     }

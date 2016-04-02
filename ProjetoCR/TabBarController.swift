@@ -1,26 +1,24 @@
 //
-//  AboutCRController.swift
+//  TabBarController.swift
 //  ProjetoCR
 //
-//  Created by Gabrielle Brandenburg dos Anjos on 3/29/16.
+//  Created by Gabrielle Brandenburg dos Anjos on 4/2/16.
 //  Copyright © 2016 João Gabriel Jardim. All rights reserved.
 //
 
 import UIKit
 
-class SobreCRController: UIViewController {
-
-    var sobreCR_View: SobreCRView!
-    
-    override func viewWillAppear(animated: Bool) {
-         self.navigationController?.navigationBar.hidden = true
-    }
+class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sobreCR_View = SobreCRView(frame: self.view.frame)
-        self.view.addSubview(sobreCR_View)
-
+        for item in self.tabBar.items! as [UITabBarItem] {
+            if let image = item.image {
+                item.image = image.imageWithColor(UIColor.whiteColor()).imageWithRenderingMode(.AlwaysOriginal)
+                item.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState: .Normal)
+                item.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.azul()], forState: .Selected)
+            }
+        }
 
         // Do any additional setup after loading the view.
     }

@@ -10,9 +10,13 @@ import UIKit
 
 class HistoricoPeriodoController: UIViewController {
 
+    var historicoPeriodo_View: HistoricoPeriodoView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        historicoPeriodo_View = HistoricoPeriodoView(frame: self.view.frame)
+        self.view.addSubview(historicoPeriodo_View)
         // Do any additional setup after loading the view.
     }
 

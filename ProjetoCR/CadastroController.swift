@@ -14,10 +14,10 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         // Do any additional setup after loading the view.
 
         cadastro_View = CadastroView(frame: self.view.frame)
         self.view.addSubview(cadastro_View)
-        // Do any additional setup after loading the view.
         cadastro_View.scrollViewCadastro.delegate = self
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CadastroController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
@@ -26,8 +26,6 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
         cadastro_View.okButton.addTarget(self, action: #selector(CadastroController.okButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
         
         cadastro_View.cancelButton.addTarget(self, action: #selector(CadastroController.cancelButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
-
-
     }
     
     func keyboardWillShow(notification: NSNotification) {
@@ -79,11 +77,7 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
             // pass data to next view
         }
     }
-    /*
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        view.endEditing(true)
-    }
-    */
+
 
     /*
     // MARK: - Navigation

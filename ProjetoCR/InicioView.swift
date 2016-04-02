@@ -12,7 +12,7 @@ class ArrowButton: UIButton {
     
     override func drawRect(rect: CGRect) {
         var leftPath = UIBezierPath()
-        leftPath.lineWidth = 14.6
+        leftPath.lineWidth = 14.6/60*frame.height
         
         leftPath.moveToPoint(CGPoint(x: 0, y:0))
         leftPath.addLineToPoint(CGPoint(x:0, y:bounds.height))
@@ -27,7 +27,6 @@ class ArrowButton: UIButton {
 
 class InicioView: UIView {
 
-    
     let background: GradientView = GradientView()
     var title = UILabel()
     var CRLabel = UILabel()
@@ -51,6 +50,8 @@ class InicioView: UIView {
 
     func addCustomView (CRType: String, CR: Double, simuText: String, decimals: Double) {
         let font72 = 72/667*frame.height
+        let font24 = 24/667*frame.height
+        let font36 = 36/667*frame.height
         Global.getSharedInstance().fontSize72 = font72
         let h = self.frame.height
         let w = self.frame.width
@@ -97,7 +98,7 @@ class InicioView: UIView {
                 
             }
             decimalLabel.textAlignment = .Center
-            decimalLabel.font.fontWithSize((28/667)*h)
+            decimalLabel.font.fontWithSize((32/667)*h)
         }
         self.addSubview(decimalLabel)
     
@@ -108,7 +109,6 @@ class InicioView: UIView {
         simuLabel.font.fontWithSize((20/667)*h)
         self.addSubview(simuLabel)
         
-
     }
     
 //    
@@ -120,7 +120,6 @@ class InicioView: UIView {
         let h = crView.frame.width
         let w = crView.frame.height
         
-    
         let circlePath = UIBezierPath(arcCenter: CGPoint(x: w/2,y: w/2), radius: CGFloat(w/2), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
         
         let shapeLayer = CAShapeLayer()

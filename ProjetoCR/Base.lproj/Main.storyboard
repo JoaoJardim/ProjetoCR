@@ -174,17 +174,82 @@
                     <view key="view" contentMode="scaleToFill" id="c9e-Ot-HF0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="peP-tk-IMt">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="SwA-Ww-NB7" customClass="SubjectCell" customModule="ProjetoCR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SwA-Ww-NB7" id="DdT-NK-VeI">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdi-aT-Nh5">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="313" y="19" width="39" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npO-we-K3Z">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="19" width="287" height="21"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="Qdi-aT-Nh5"/>
+                                                    <exclude reference="npO-we-K3Z"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="Qdi-aT-Nh5"/>
+                                                    <include reference="npO-we-K3Z"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="gradeLabel" destination="Qdi-aT-Nh5" id="2qD-AW-QJ8"/>
+                                            <outlet property="subjectLabel" destination="npO-we-K3Z" id="X8t-5A-nsR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="121" width="360" height="347"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="peP-tk-IMt"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="peP-tk-IMt"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Qs6-bk-gpi"/>
                     <connections>
+                        <outlet property="meuPeriodoTableView" destination="peP-tk-IMt" id="Z9m-Rh-dhz"/>
                         <segue destination="JR2-x1-vhg" kind="show" id="dy5-WH-p8b"/>
                         <segue destination="TsB-qz-0Hg" kind="show" id="lGI-Gf-ufx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZP3-wM-BNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2965" y="-370"/>
+            <point key="canvasLocation" x="2964" y="-370"/>
         </scene>
         <!--inicio-->
         <scene sceneID="RQi-NR-0fT">
@@ -249,14 +314,14 @@
         <!--Tab Bar Controller-->
         <scene sceneID="vR6-wK-y4T">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Fgp-8v-IVg" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Fgp-8v-IVg" customClass="TabBarController" customModule="ProjetoCR" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uBK-Ob-rYQ">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" red="0.53333333333333333" green="0.81568627450980391" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -279,7 +344,7 @@
         <scene sceneID="4OI-jh-q8I">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RjE-E5-6ik" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="config" id="9d5-ZD-Gnm"/>
+                    <tabBarItem key="tabBarItem" title="config" image="settings" id="9d5-ZD-Gnm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ofA-aU-YPq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -298,7 +363,7 @@
         <scene sceneID="qUS-Ja-WgX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rG2-5b-PSE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="sobre o CR" id="Ggr-b5-LJN"/>
+                    <tabBarItem key="tabBarItem" title="sobre o CR" image="sobreCR" id="Ggr-b5-LJN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="T8a-V9-etz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -317,7 +382,7 @@
         <scene sceneID="itm-aZ-VW8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tvc-sI-YOo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="início" id="C2r-D3-m16"/>
+                    <tabBarItem key="tabBarItem" title="início" image="inicio" selectedImage="inicio" id="C2r-D3-m16"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="myB-1U-c2u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -336,7 +401,7 @@
         <scene sceneID="n2g-ek-muY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="blr-gx-PQN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="meu período" id="Hwf-OK-Ebb"/>
+                    <tabBarItem key="tabBarItem" title="meu período" image="meuperiodo" id="Hwf-OK-Ebb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dft-AR-b3N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -355,7 +420,7 @@
         <scene sceneID="Nbo-lT-Rse">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6dn-Gf-5LU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="histórico" id="8mp-Km-qmD"/>
+                    <tabBarItem key="tabBarItem" title="histórico" image="historico" id="8mp-Km-qmD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CaU-Kb-1ge">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -371,5 +436,12 @@
             <point key="canvasLocation" x="2153" y="-1477"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+    <resources>
+        <image name="historico" width="62" height="46"/>
+        <image name="inicio" width="27" height="25"/>
+        <image name="meuperiodo" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
+        <image name="sobreCR" width="38" height="50"/>
+    </resources>
+    <color key="tintColor" red="0.53333333329999999" green="0.81568627449999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

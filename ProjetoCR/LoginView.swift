@@ -10,10 +10,7 @@ import UIKit
 
 class LoginView: UIView {
 
-    let attributes = [
-        NSForegroundColorAttributeName: UIColor.whiteColor(),
-        NSFontAttributeName : UIFont(name: "Lane - Narrow", size: 24)! // Note the !
-    ]
+
     
     var usernameTextfield: UITextField = UITextField()
     var passwordTextfield: UITextField = UITextField()
@@ -31,7 +28,11 @@ class LoginView: UIView {
     }
 
     func addCustomView() {
-        
+        let font24 = (24/667)*frame.height
+        let attributes = [
+            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName : UIFont(name: "Lane - Narrow", size: font24)! // Note the !
+        ]
         background.frame = CGRectMake(0, 0, frame.width, frame.height)
         background.colors = [UIColor.azul(), UIColor.laranja()]
         self.addSubview(background)
@@ -55,14 +56,14 @@ class LoginView: UIView {
         enterButton.frame = CGRectMake(self.frame.width*0.067, self.frame.height*0.606, self.frame.width*0.867, self.frame.height*0.09)
         enterButton.backgroundColor = UIColor.whiteColor()
         enterButton.setTitle("entrar", forState: UIControlState.Normal)
-        enterButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: 24)
+        enterButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: font24)
         enterButton.setTitleColor(UIColor.laranja(), forState: UIControlState.Normal)
         self.addSubview(enterButton)
         
         signUpButton.frame = CGRectMake(0.584*self.frame.width,0.712*self.frame.height,0.349*self.frame.width,0.043*self.frame.height)
         signUpButton.backgroundColor = UIColor.clearColor()
         signUpButton.setTitle("Cadastre-se", forState: UIControlState.Normal)
-        signUpButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: 24)
+        signUpButton.titleLabel!.font = UIFont(name: "Lane - Narrow", size: font24)
         signUpButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         self.addSubview(signUpButton)
 
