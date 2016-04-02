@@ -224,7 +224,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="121" width="360" height="347"/>
+                                    <rect key="frame" x="5" y="173" width="365" height="362"/>
                                 </variation>
                             </tableView>
                         </subviews>

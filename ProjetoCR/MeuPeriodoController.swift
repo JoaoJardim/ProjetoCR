@@ -11,6 +11,7 @@ import UIKit
 class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var meuPeriodoTableView: UITableView!
+    
     var meuPeriodo_View: MeuPeriodoView!
     
     var subjects: [String] = ["MAT1162", "FIS1041", "ENG1005"]
@@ -18,7 +19,6 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = true
-        
     }
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
         meuPeriodo_View = MeuPeriodoView(frame: self.view.frame)
         self.view.addSubview(meuPeriodo_View)
         
-        meuPeriodoTableView.registerClass(SubjectCell.self, forCellReuseIdentifier: "cell")
+        //meuPeriodoTableView.registerClass(SubjectCell.self, forCellReuseIdentifier: "cell")
         meuPeriodoTableView.delegate      =   self
         meuPeriodoTableView.dataSource    =   self
         
@@ -46,7 +46,10 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell: SubjectCell = meuPeriodoTableView.dequeueReusableCellWithIdentifier("cell")! as! SubjectCell
+        let cell = meuPeriodoTableView.dequeueReusableCellWithIdentifier("cell")! as! SubjectCell
+        
+        cell.subjectLabel.text = subjects[indexPath.row]
+        cell.gradeLabel.text = "\(subjGrade[indexPath.row])"
         
         return cell
         
