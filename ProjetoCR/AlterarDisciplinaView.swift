@@ -64,10 +64,9 @@ class AlterarDisciplinaView: UIView {
         
         gradeTextField.frame = CGRectMake(0.727*w,0.13*h,0.273*w,0.87*h)
         gradeTextField.backgroundColor = UIColor.whiteColor()
-        gradeTextField.frame = CGRectMake(0*w,0.85*h,1*w,0.148*h)
         gradeTextField.textColor = UIColor.whiteColor()
         gradeTextField.borderStyle = UITextBorderStyle.None
-        gradeTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
+        gradeTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(1)
         gradeTextField.textAlignment = .Center
         grade.addSubview(gradeTextField)
         
@@ -82,7 +81,7 @@ class AlterarDisciplinaView: UIView {
         gradeCheckedImage.image = UIImage(named: "checked")
         gradeCheckedButton.addSubview(gradeCheckedImage)
         
-        gradeCheckedSquareImage.frame =  CGRectMake(0*w,0*h,0.992*w,0.992*h)
+        gradeCheckedSquareImage.frame = CGRectMake(0*w,0*h,0.992*w,0.992*h)
         gradeCheckedSquareImage.image = UIImage(named: "checkedsquare")
         gradeCheckedButton.addSubview(gradeCheckedSquareImage)
     }
