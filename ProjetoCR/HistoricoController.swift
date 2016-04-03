@@ -10,6 +10,8 @@ import UIKit
 
 class HistoricoController: UIViewController {
     
+    @IBOutlet weak var HistoricoTableView: UITableView!
+    
     var historico_View: HistoricoView!
 
     override func viewWillAppear(animated: Bool) {
@@ -20,6 +22,8 @@ class HistoricoController: UIViewController {
         super.viewDidLoad()
         historico_View = HistoricoView(frame: self.view.frame)
         self.view.addSubview(historico_View)
+        
+        HistoricoTableView.backgroundView = nil
 
         // Do any additional setup after loading the view.
     }

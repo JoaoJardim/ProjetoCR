@@ -14,6 +14,7 @@ public var usuarioAtual: Aluno!
 // usuarios pré-cadastrados
 public func iniciar_usuarios () {
 listaAlunos.append(Aluno(faculdade: "PUC-Rio", matricula: "1413383", senha: "123", nome: "Wellington", crGlobal: 7.0))
+listaAlunos.append(Aluno(faculdade: "PUC-Rio", matricula: "1510542", senha: "12345", nome: "Gabrielle", crGlobal: 7.0))
 }
 
 
