@@ -25,11 +25,20 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         
         meuPeriodo_View = MeuPeriodoView(frame: self.view.frame)
+        
         self.view.addSubview(meuPeriodo_View)
         
         //meuPeriodoTableView.registerClass(SubjectCell.self, forCellReuseIdentifier: "cell")
         meuPeriodoTableView.delegate      =   self
         meuPeriodoTableView.dataSource    =   self
+        meuPeriodoTableView.separatorColor = UIColor.whiteColor()
+        meuPeriodoTableView.layoutMargins = UIEdgeInsetsZero
+        meuPeriodoTableView.separatorInset = UIEdgeInsetsZero
+        meuPeriodoTableView.backgroundView = nil
+        //meuPeriodoTableView.separatorStyle = nil
+        
+        meuPeriodo_View.addSubjectButton.addTarget(self, action: #selector(MeuPeriodoController.addSubjectPressed), forControlEvents: UIControlEvents.TouchUpInside)
+
         
         //self.view.addSubview(meuPeriodoTableView)
         // Do any additional setup after loading the view.
@@ -40,6 +49,11 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
+    func addSubjectPressed () {
+        performSegueWithIdentifier("GoToNewSubject", sender: self)
+        
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.subjects.count
     }
@@ -48,6 +62,7 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
         
         let cell = meuPeriodoTableView.dequeueReusableCellWithIdentifier("cell")! as! SubjectCell
         
+        cell.layoutMargins = UIEdgeInsetsZero
         cell.subjectLabel.text = subjects[indexPath.row]
         cell.gradeLabel.text = "\(subjGrade[indexPath.row])"
         
@@ -57,8 +72,12 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("You selected cell #\(indexPath.row)!")
+        performSegueWithIdentifier("GoToSubject", sender: self)
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = false
+    }
     /*
     // MARK: - Navigation
 
