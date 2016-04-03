@@ -8,12 +8,12 @@
 
 import Foundation
 
-class Criterio {
+public class Criterio {
 	// MARK: Atributes
-	private var numero:		Int
-	private var qtdGraus:	Int
+	public var numero:		Int
+	public var qtdGraus:	Int
 	
-	private var criterioCalculo: [Int: ([Double])->(Double)] = [
+	public var criterioCalculo: [Int: ([Double])->(Double)] = [
 		1:	crit1,
 		2:	crit2,
 		3:	crit3,
@@ -60,22 +60,22 @@ class Criterio {
 	}
 }
 
-private func crit1(graus:[Double])->Double {
+public func crit1(graus:[Double])->Double {
 	if (graus[1] < 3) {
 		return (graus[0] + graus[1] * 2) / 3
 	}
 	return (graus[0] * 2 + graus[1] * 3) / 5
 }
-private func crit2(graus:[Double])->Double {
+public func crit2(graus:[Double])->Double {
 	return (graus[0] + graus[1] * 2) / 3
 }
-private func crit3(graus:[Double])->Double {
+public func crit3(graus:[Double])->Double {
 	if (graus[1] < 3) {
 		return (graus[0] + graus[1] * 3) / 4
 	}
 	return (graus[0] + graus[1]) / 2
 }
-private func crit4(graus:[Double])->Double {
+public func crit4(graus:[Double])->Double {
 	if (graus[0] >= 3 && graus[1] >= 3 && graus[2] >= 3 && (graus[0] + graus[1] + graus[2]) / 3 >= 5) {
 		return (graus[0] + graus[1] + graus[2]) / 3
 	}
@@ -84,7 +84,7 @@ private func crit4(graus:[Double])->Double {
 	}
 	return (graus[0] + graus[1] + graus[2] + graus[3] * 3) / 6
 } // critério chato! - revisar
-private func crit5(graus:[Double])->Double {
+public func crit5(graus:[Double])->Double {
 	if (graus[0] >= 5 && graus[1] >= 5 && graus[2]>=5 || (graus[0] + graus[1] + graus[2]) / 3 >= 6) {
 		return (graus[0]+graus[1]+graus[2])/3
 	}
@@ -93,7 +93,7 @@ private func crit5(graus:[Double])->Double {
 	}
 	return (graus[0]+graus[1]+graus[2]+graus[3]*3)/6
 } // critério chato! - revisar
-private func crit6(graus:[Double])->Double {
+public func crit6(graus:[Double])->Double {
 	if (graus[0] >= 3 && graus[1] >= 3 && (graus[0] + graus[1]) / 2 >= 5) {
 		return (graus[0]+graus[1])/2
 	}
@@ -102,13 +102,13 @@ private func crit6(graus:[Double])->Double {
 	}
 	return (graus[0] + graus[1] + graus[2] - graus.minElement()!) / 2
 } // critério chato! - revisar
-private func crit7(graus:[Double])->Double {
+public func crit7(graus:[Double])->Double {
 	if (graus[0] >= 3 && graus[1] >= 3 && (graus[0] + graus[1]) / 2 >= 6) {
 		return (graus[0] + graus[1]) / 2
 	}
 	return (graus[0] + graus[1] + graus[2] * 2) / 4
 }
-private func crit8(graus:[Double])->Double {
+public func crit8(graus:[Double])->Double {
 	let N1 = (graus[0] * 2 + graus[1] * 3) / 5
 	
 	if (graus[0] > 3 && graus[1] > 3 && N1 > 6) {
@@ -119,10 +119,10 @@ private func crit8(graus:[Double])->Double {
 	}
 	return (N1 + graus[2]) / 2
 }
-private func crit9(graus:[Double])->Double {
+public func crit9(graus:[Double])->Double {
 	return (graus[0] + graus[1] + graus[2] + graus[3]) / 4
 }
-private func crit10(graus:[Double])->Double {
+public func crit10(graus:[Double])->Double {
 	var NL:			Double
 	var NT:			Double
 	var grausNL:	[Double] = []
