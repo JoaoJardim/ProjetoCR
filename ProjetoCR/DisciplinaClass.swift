@@ -8,12 +8,12 @@
 
 import Foundation
 
-class Disciplina {
+public class Disciplina {
 	// MARK: Atributes
-	private var nome:			String
-	private var qtdCreditos:	Int
-	private var codigo:			String
-	private var criterio:		Criterio
+	public var nome:			String
+	public var qtdCreditos:	Int
+	public var codigo:			String
+	public var criterio:		Criterio
 	
 	// MARK: Methods
 	init(nome: String, qtdCreditos: Int, codigo: String, criterio: Int){

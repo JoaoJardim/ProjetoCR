@@ -8,12 +8,12 @@
 
 import Foundation
 
-class Cursar {
+public class Cursar {
 	// MARK: Atributes
-	private var aluno:		Aluno
-	private var disciplina:	Disciplina
-	private var semestre:	Int
-	private var graus		= [Double]()
+	public var aluno:		Aluno
+	public var disciplina:	Disciplina
+	public var semestre:	Int
+	public var graus		= [Double]()
 	
 	// MARK: Methods
 	init(aluno: Aluno, disciplina: Disciplina, semestre: Int){

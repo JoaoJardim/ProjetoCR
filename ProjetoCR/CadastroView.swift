@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CadastroView: UIView {
 
 
@@ -20,6 +21,7 @@ class CadastroView: UIView {
     var cursoTextField = UITextField()
     var passwordTextField = UITextField()
     var confirmPasswordTextField = UITextField()
+
     
     var emailLabel = UILabel()
     var matriculaLabel = UILabel()
@@ -162,12 +164,4 @@ class CadastroView: UIView {
         
     }
     
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }

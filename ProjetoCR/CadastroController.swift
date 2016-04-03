@@ -12,10 +12,14 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
 
     var cadastro_View: CadastroView!
     
+    var alertView: UIAlertController!
+    var alertView2: UIAlertController!
+    var alertView3: UIAlertController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         // Do any additional setup after loading the view.
-
+        // Do any additional setup after loading the view.
+        
         cadastro_View = CadastroView(frame: self.view.frame)
         self.view.addSubview(cadastro_View)
         cadastro_View.scrollViewCadastro.delegate = self
@@ -26,7 +30,58 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
         cadastro_View.okButton.addTarget(self, action: #selector(CadastroController.okButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
         
         cadastro_View.cancelButton.addTarget(self, action: #selector(CadastroController.cancelButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        // botao de Ok para os alertas
+        let okAction = UIAlertAction (title: "OK", style: .Default, handler: nil)
+        
+        // Alerta de algum campo vazio no cadastro:
+        alertView = UIAlertController (title: "Cadastro incompleto", message: "Por favor preencha todos os campos para finalizar o cadastro", preferredStyle: .Alert)
+        alertView.addAction (okAction)
+        
+        // Alerta de senha diferente da confirmação:
+/*
+        alertView2 = UIAlertController (title: "Erro", message: "O campo de confirmação de senha nao confere com a senha inserida", preferredStyle: .Alert)
+        alertView2.addAction (okAction)
+ */
+        
+        // Alerta de usuario ja existe:
+        alertView3 = UIAlertController (title: "Erro", message: "O e-mail inserido ja possui um cadastro", preferredStyle: .Alert)
+        alertView3.addAction (okAction)
+
+        
+
     }
+    
+    // --------------------------------- BANCO DE DADOS  ----------------------------------//
+    
+
+    func cadastroValido() -> Bool {
+        // Caso em que algum campo ficou vazio
+        if ( cadastro_View.emailTextField.text!.isEmpty || cadastro_View.matriculaTextField.text!.isEmpty || cadastro_View.cursoTextField.text!.isEmpty || cadastro_View.passwordTextField.text!.isEmpty  ) {
+            presentViewController(alertView, animated: true, completion: nil)
+            return false
+        }
+        
+        // Caso de confirmar senha diferente da senha inserida
+        
+/*      if passwordTextField.text != confirmPasswordTextField.text {
+            presentViewController(alertView2, animated: true, completion: nil)
+             print("senhas diferentes")
+            return false
+        }
+*/
+        
+        // Caso em que o usuario ja existe
+        let indice = indicePessoaPorMatricula(cadastro_View.matriculaTextField.text!)
+        // se nao existe, o retorno foi -1
+        if (indice != -1) {
+            presentViewController(alertView3, animated: true, completion: nil)
+            return false
+        }
+        return true
+    }
+    
+    // ------------------------------------- || ----------------------------------------//
     
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
@@ -47,10 +102,17 @@ class CadastroController: UIViewController, UIScrollViewDelegate {
     }
     
     //Função pra pegar as informações do cadastro
+    
+    
     func okButtonPressed(){
-        self.performSegueWithIdentifier("BackToLogin", sender: self)
-        print("OkButton")
-        
+        if (cadastroValido()) {
+            let pessoacad = Aluno(faculdade: cadastro_View.cursoTextField.text!, matricula: cadastro_View.matriculaTextField.text!, senha: cadastro_View.passwordTextField.text!, nome: cadastro_View.emailTextField.text!, crGlobal: 7.0 )
+            listaAlunos.append(pessoacad)
+            print("Matriculado com sucesso!!")
+            print("\(pessoacad.matricula)")
+            self.performSegueWithIdentifier("BackToLogin", sender: self)
+            print("OkButton")
+        }
     }
     
     func cancelButtonPressed () {

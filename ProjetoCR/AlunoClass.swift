@@ -8,15 +8,15 @@
 
 import Foundation
 
-class Aluno {
+public class Aluno {
 	// MARK: Atributes
-	private var faculdade:				String
-	private var matricula:				String
-	private var senha:					String
-	private var nome:					String
-	private var semestreDeEntrada:		Int
-	private var crGlobal:				Double
-	private var disciplinasCursadas:	[Cursar]
+	public var faculdade:				String
+	public var matricula:				String
+	public  var senha:					String
+	public  var nome:					String
+	//public  var semestreDeEntrada:		Int
+	public  var crGlobal:				Double
+	public  var disciplinasCursadas:	[Cursar]
 	
 	// MARK: Methods
 	init(faculdade: String, matricula: String, senha: String, nome: String, crGlobal: Double){
@@ -24,7 +24,7 @@ class Aluno {
 		self.matricula			= matricula
 		self.senha				= senha
 		self.nome				= nome
-		self.semestreDeEntrada	= Int(matricula.substringToIndex(matricula.endIndex.advancedBy(-4)))!
+		//self.semestreDeEntrada	= Int(matricula.substringToIndex(matricula.endIndex.advancedBy(-4)))!
 		self.crGlobal			= crGlobal
 		disciplinasCursadas		= []
 	}
@@ -103,4 +103,11 @@ class Aluno {
 	private func clearDisciplinas(){
 		self.disciplinasCursadas.removeAll()
 	}
+    
+    public func obtem_matricula () -> String {
+        return self.matricula
+    }
+    
+    
+    
 }

@@ -38,6 +38,7 @@
 		2EB16A9D1CAC577A00427945 /* AlterarDisciplinaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A9C1CAC577A00427945 /* AlterarDisciplinaController.swift */; };
 		2EB16A9F1CAC579900427945 /* NovaDisciplinaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16A9E1CAC579900427945 /* NovaDisciplinaController.swift */; };
 		2EB16AA11CAC57C700427945 /* OportunidadesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB16AA01CAC57C700427945 /* OportunidadesController.swift */; };
+		409CB02F1CB0ACA4004837E4 /* BancodeDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409CB02E1CB0ACA4004837E4 /* BancodeDados.swift */; };
 		C9F5F5701CA5CF3B00B27FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5F56F1CA5CF3B00B27FFD /* AppDelegate.swift */; };
 		C9F5F5721CA5CF3B00B27FFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5F5711CA5CF3B00B27FFD /* ViewController.swift */; };
 		C9F5F5751CA5CF3C00B27FFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F5F5731CA5CF3B00B27FFD /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 		2EB16A9C1CAC577A00427945 /* AlterarDisciplinaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterarDisciplinaController.swift; sourceTree = "<group>"; };
 		2EB16A9E1CAC579900427945 /* NovaDisciplinaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovaDisciplinaController.swift; sourceTree = "<group>"; };
 		2EB16AA01CAC57C700427945 /* OportunidadesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OportunidadesController.swift; sourceTree = "<group>"; };
+		409CB02E1CB0ACA4004837E4 /* BancodeDados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BancodeDados.swift; sourceTree = "<group>"; };
 		C97EA2681CACD39A006FD481 /* TestingGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGround.playground; sourceTree = "<group>"; };
 		C9F5F56C1CA5CF3B00B27FFD /* ProjetoCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F5F56F1CA5CF3B00B27FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				C9F5F56F1CA5CF3B00B27FFD /* AppDelegate.swift */,
 				C9F5F5711CA5CF3B00B27FFD /* ViewController.swift */,
+				409CB02E1CB0ACA4004837E4 /* BancodeDados.swift */,
 				C9F5F5731CA5CF3B00B27FFD /* Main.storyboard */,
 				C9F5F5761CA5CF3C00B27FFD /* Assets.xcassets */,
 				C9F5F5781CA5CF3C00B27FFD /* LaunchScreen.storyboard */,
@@ -297,6 +300,7 @@
 				2E0F76A11CB04D2000391D37 /* TabBarController.swift in Sources */,
 				2EB16A971CAC573700427945 /* CadastroController.swift in Sources */,
 				2E0F769F1CB04B2900391D37 /* UIImageExtension.swift in Sources */,
+				409CB02F1CB0ACA4004837E4 /* BancodeDados.swift in Sources */,
 				2EB16A711CAB187C00427945 /* ConfigController.swift in Sources */,
 				2EB16AA11CAC57C700427945 /* OportunidadesController.swift in Sources */,
 				2EB16A6F1CAB185E00427945 /* MeuPeriodoController.swift in Sources */,

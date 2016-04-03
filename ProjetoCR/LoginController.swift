@@ -9,6 +9,9 @@
 import UIKit
 
 class LoginController: UIViewController {
+    
+    var alertView: UIAlertController!
+    var alertView2: UIAlertController!
 
     var login_View: LoginView!
     
@@ -21,8 +24,12 @@ class LoginController: UIViewController {
         
         login_View.signUpButton.addTarget(self, action: #selector(LoginController.signUpButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
         
-
-        // Do any additional setup after loading the view.
+        alertView = UIAlertController (title: "Erro", message: "Usuário não existe", preferredStyle: .Alert)
+        let okAction = UIAlertAction (title: "OK", style: .Default, handler: nil)
+        alertView.addAction (okAction)
+        
+        alertView2 = UIAlertController (title: "Erro", message: "Senha Incorreta", preferredStyle: .Alert)
+        alertView2.addAction (okAction)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +39,23 @@ class LoginController: UIViewController {
             }
     
     func enterButtonPressed() {
-        self.performSegueWithIdentifier("GoToTabBar", sender: self)
+        
+        let indice_usuario = indicePessoaPorMatricula(login_View.usernameTextfield.text!)
+        // se nao existe, avisa
+        if (indice_usuario == -1) {
+            print("Usuário não existe!")
+            presentViewController(alertView, animated: true, completion: nil)
+        } else { // se existe, confere a senha
+            if (listaAlunos[indice_usuario].senha == login_View.passwordTextfield.text) {
+                usuarioAtual = listaAlunos[indice_usuario]
+                self.performSegueWithIdentifier("GoToTabBar", sender: self)
+            } else { // avisa se a senha estiver errada
+                presentViewController(alertView2, animated: true, completion: nil)
+            }
+            
+        }
+        
+   
     }
     
     func signUpButtonPressed() {
