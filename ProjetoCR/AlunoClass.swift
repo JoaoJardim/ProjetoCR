@@ -14,7 +14,7 @@ public class Aluno {
 	public var matricula:				String
 	public  var senha:					String
 	public  var nome:					String
-	//public  var semestreDeEntrada:		Int
+	public  var semestreDeEntrada:		Int
 	public  var crGlobal:				Double
 	public  var disciplinasCursadas:	[Cursar]
 	
@@ -24,7 +24,7 @@ public class Aluno {
 		self.matricula			= matricula
 		self.senha				= senha
 		self.nome				= nome
-		//self.semestreDeEntrada	= Int(matricula.substringToIndex(matricula.endIndex.advancedBy(-4)))!
+		self.semestreDeEntrada	= Int(matricula.substringToIndex(matricula.endIndex.advancedBy(-4)))!
 		self.crGlobal			= crGlobal
 		disciplinasCursadas		= []
 	}

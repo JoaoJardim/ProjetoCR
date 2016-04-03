@@ -17,6 +17,10 @@ class AlterarDisciplinaView: UIView {
     let grauTitleLabel = UILabel()
     let grau = UILabel()
     
+    let addSubjectButton = UIButton()
+    let titLabel = UILabel()
+    let plusShape = UIImageView()
+    
     let G1 = UIView()
     let G2 = UIView()
     let G3 = UIView()
@@ -64,7 +68,7 @@ class AlterarDisciplinaView: UIView {
         
         gradeTextField.frame = CGRectMake(0.727*w,0.13*h,0.273*w,0.87*h)
         gradeTextField.backgroundColor = UIColor.whiteColor()
-        gradeTextField.textColor = UIColor.whiteColor()
+        gradeTextField.textColor = UIColor.blackColor()
         gradeTextField.borderStyle = UITextBorderStyle.None
         gradeTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(1)
         gradeTextField.textAlignment = .Center
@@ -96,6 +100,10 @@ class AlterarDisciplinaView: UIView {
         background.frame = CGRectMake(0, 0, w, h)
         background.colors = [UIColor.azul(), UIColor.laranja()]
         self.addSubview(background)
+        
+        addSubjectButton.frame =  CGRectMake(0.331*w,0.825*h,0.339*w,0.081*h)
+        addSubjectButton.backgroundColor = UIColor.clearColor()
+        self.addSubview(addSubjectButton)
 
         
         title.frame = CGRectMake(0.345*w,0.135*h,0.309*w,0.064*h)
@@ -123,14 +131,20 @@ class AlterarDisciplinaView: UIView {
         G4.frame = CGRectMake(0.037*w,0.547*h,0.587*w,0.069*h)
         setGradeView(G4, gradeLabel: G4Label, gradeText: "G3", gradeTextField: G4TextField, gradeCheckedButton: G4checkedButton, gradeCheckedImage: G4checkedImage, gradeCheckedSquareImage: G4squareImage)
         addSubview(G4)
+        
+        titLabel.text = "Salvar"
+        titLabel.frame = CGRectMake(0*w,0.685*h,1*w,0.315*h)
+        titLabel.font.fontWithSize(font18)
+        titLabel.textColor = UIColor.blackColor()
+        titLabel.textAlignment = .Center
+        addSubjectButton.addSubview(titLabel)
+        
+        plusShape.image = UIImage(named: "save")
+        plusShape.frame = CGRectMake(0.09*w,0*h,0.09*w,0.09*h)
+        addSubjectButton.addSubview(plusShape)
+        
     }
     
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+    
 
 }

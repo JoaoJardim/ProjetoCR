@@ -22,12 +22,18 @@ class AlterarDisciplinaController: UIViewController {
         self.view.addSubview(alterarDisciplina_View)
         
         alterarDisciplina_View.G1checkedButton.addTarget(self, action: #selector(AlterarDisciplinaController.changeCheckedStatus(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-        // Do any additional setup after loading the view.
+       
+        alterarDisciplina_View.addSubjectButton.addTarget(self, action: #selector(AlterarDisciplinaController.addSavePressed), forControlEvents: UIControlEvents.TouchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func addSavePressed () {
+        performSegueWithIdentifier("backtomeuperiodo", sender: self)
+        
     }
     
      //altera o status do Checked Square (confirma se a nota é real ou simulada)

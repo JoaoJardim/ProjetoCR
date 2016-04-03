@@ -60,3 +60,20 @@ usuario.addDisciplina(novaDisc)
 //removendo uma disc
 usuario.removeDisciplina(novaDisc)
 
+var todasdisciplinas = ["inf1", "inf2", "inf1", "inf1"]
+var someInts = [String]()
+var j = 0
+ for (var i=0; i<todasdisciplinas.count; i += 1) {
+    if (todasdisciplinas[i] == "inf")
+    {
+        someInts[j] = todasdisciplinas[i]
+    }
+}
+
+
+    
+    
+    
+    
+    
+

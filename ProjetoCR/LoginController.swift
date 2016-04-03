@@ -48,6 +48,10 @@ class LoginController: UIViewController {
         } else { // se existe, confere a senha
             if (listaAlunos[indice_usuario].senha == login_View.passwordTextfield.text) {
                 usuarioAtual = listaAlunos[indice_usuario]
+                
+               //  gerahistoricousuarioatual(usuarioAtual.disciplinasCursadas, )
+                
+                print("o meu semestre é: \(usuarioAtual.semestreDeEntrada)")
                 self.performSegueWithIdentifier("GoToTabBar", sender: self)
             } else { // avisa se a senha estiver errada
                 presentViewController(alertView2, animated: true, completion: nil)

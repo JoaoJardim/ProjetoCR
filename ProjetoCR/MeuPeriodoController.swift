@@ -55,7 +55,7 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.subjects.count
+        return listaTodasDisciplinas.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -63,8 +63,8 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
         let cell = meuPeriodoTableView.dequeueReusableCellWithIdentifier("cell")! as! SubjectCell
         
         cell.layoutMargins = UIEdgeInsetsZero
-        cell.subjectLabel.text = subjects[indexPath.row]
-        cell.gradeLabel.text = "\(subjGrade[indexPath.row])"
+        cell.subjectLabel.text = listaTodasDisciplinas[indexPath.row].codigo
+        //cell.gradeLabel.text = "\(subjGrade[indexPath.row])"
         
         return cell
         
@@ -78,14 +78,5 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidDisappear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = false
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
