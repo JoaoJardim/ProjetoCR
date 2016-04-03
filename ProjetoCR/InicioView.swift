@@ -60,7 +60,7 @@ class InicioView: UIView {
         background.colors = [UIColor.azul(), UIColor.laranja()]
         self.addSubview(background)
         
-        leftButton.frame = CGRectMake(0.112*w,0.418*h,0.109*w,0.063*h) //CGRectMake(0.112*w,0.421*h,0.071*w,0.079*h)
+        leftButton.frame = CGRectMake(0.112*w,0.418*h,0.109*w,0.063*h)
         leftButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI/4))
         self.addSubview(leftButton)
         

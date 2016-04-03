@@ -31,7 +31,7 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
         //meuPeriodoTableView.registerClass(SubjectCell.self, forCellReuseIdentifier: "cell")
         meuPeriodoTableView.delegate      =   self
         meuPeriodoTableView.dataSource    =   self
-        meuPeriodoTableView.separatorColor = UIColor.whiteColor()
+        //meuPeriodoTableView.separatorColor = UIColor.whiteColor()
         //meuPeriodoTableView.layoutMargins = UIEdgeInsetsZero
         //meuPeriodoTableView.separatorInset = UIEdgeInsetsZero
         meuPeriodoTableView.backgroundView = nil

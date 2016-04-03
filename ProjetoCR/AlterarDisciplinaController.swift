@@ -10,13 +10,18 @@ import UIKit
 
 class AlterarDisciplinaController: UIViewController {
 
+    var codigoDisciplina = "FIS1051"
+    var nomeDisciplina = "Eletromagnetismo"
+    
     var alterarDisciplina_View: AlterarDisciplinaView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        alterarDisciplina_View = AlterarDisciplinaView(frame: self.view.frame)
+        alterarDisciplina_View = AlterarDisciplinaView(frame: self.view.frame, subjectCode: codigoDisciplina, subjectName: nomeDisciplina)
         self.view.addSubview(alterarDisciplina_View)
+        
+        alterarDisciplina_View.G1checkedButton.addTarget(self, action: #selector(AlterarDisciplinaController.changeCheckedStatus(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         // Do any additional setup after loading the view.
     }
 
@@ -25,7 +30,10 @@ class AlterarDisciplinaController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+     //altera o status do Checked Square (confirma se a nota é real ou simulada)
+    func changeCheckedStatus (sender: UIButton!) {
+        
+    }
     /*
     // MARK: - Navigation
 

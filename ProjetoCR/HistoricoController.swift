@@ -8,11 +8,15 @@
 
 import UIKit
 
-class HistoricoController: UIViewController {
+class HistoricoController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var HistoricoTableView: UITableView!
     
+    
     var historico_View: HistoricoView!
+    
+    var semesters = ["2014.2", "2015.1", "2015.2"]
+    var CRSemester = [9.0, 6.7, 7.1]
 
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = true
@@ -31,6 +35,27 @@ class HistoricoController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.semesters.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = HistoricoTableView.dequeueReusableCellWithIdentifier("cellH")! as! SubjectCell
+        
+        //cell.layoutMargins = UIEdgeInsetsZero
+        cell.subjectLabel.text = semesters[indexPath.row]
+        cell.gradeLabel.text = "\(CRSemester[indexPath.row])"
+        
+        return cell
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        performSegueWithIdentifier("GoToHistoricoPeriodo", sender: self)
     }
     
 
