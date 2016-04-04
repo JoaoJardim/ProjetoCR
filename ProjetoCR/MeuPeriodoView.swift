@@ -38,6 +38,7 @@ import UIKit
 class MeuPeriodoView: UIView {
 
     let background: GradientView = GradientView()
+    let title = UILabel()
     let addSubjectButton = UIButton()
     let titLabel = UILabel()
     let plusShape = UIImageView()
@@ -56,14 +57,23 @@ class MeuPeriodoView: UIView {
         var w = frame.width
         var h = frame.height
         let font14 = CGFloat((14/667)*h)
+        let font36 = CGFloat((36/667)*h)
         
         background.frame = CGRectMake(0, 0, frame.width, frame.height)
         background.colors = [UIColor.azul(), UIColor.laranja()]
         self.addSubview(background)
         
+        title.frame = CGRectMake(0*w,0.082*h,1*w,0.064*h)
+        title.text = "Meu Período"
+        title.textColor = UIColor.whiteColor()
+        title.font = UIFont(name: "Lane - Narrow", size: font36)
+        title.textAlignment = .Center
+        self.addSubview(title)
+        
         addSubjectButton.frame =  CGRectMake(0.331*w,0.825*h,0.339*w,0.081*h)
         addSubjectButton.backgroundColor = UIColor.clearColor()
         self.addSubview(addSubjectButton)
+        
         
         w = addSubjectButton.frame.width
         h = addSubjectButton.frame.height

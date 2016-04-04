@@ -25,13 +25,19 @@ class AlterarDisciplinaController: UIViewController {
        
         alterarDisciplina_View.saveSubjectDataButton.addTarget(self, action: #selector(AlterarDisciplinaController.savePressed), forControlEvents: UIControlEvents.TouchUpInside)
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        view.endEditing(true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func savePressed () {
+    func savePressed () { // quero passar as notas que são preenchidas pra variável que armazena nota de cada discplina mas não sei qual é essa variável, por favor completar D:
+        //disciplina1.notaG1 = alterarDisciplina_View.G1TextField.text
         performSegueWithIdentifier("backtomeuperiodo", sender: self)
         
     }

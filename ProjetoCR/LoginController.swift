@@ -61,9 +61,15 @@ class LoginController: UIViewController {
    
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        view.endEditing(true)
+    }
+    
     func signUpButtonPressed() {
         self.performSegueWithIdentifier("GoToCadastro", sender: self)
     }
+    
     
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

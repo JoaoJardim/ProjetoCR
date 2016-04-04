@@ -39,15 +39,15 @@ class LoginView: UIView {
         
         usernameTextfield.frame = CGRectMake(self.frame.width*0.0666667, self.frame.height*0.410795, self.frame.width*0.866667, self.frame.height*0.09)  // como que faz pra usar view.height/width???????
         usernameTextfield.textColor = UIColor.whiteColor()
-        usernameTextfield.attributedPlaceholder = NSAttributedString(string: "Matricula", attributes: attributes)
+        usernameTextfield.attributedPlaceholder = NSAttributedString(string: "matrícula", attributes: attributes)
         usernameTextfield.borderStyle = UITextBorderStyle.None
         usernameTextfield.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
         usernameTextfield.textAlignment = .Center
         self.addSubview(usernameTextfield)
         
         passwordTextfield.frame = CGRectMake(self.frame.width*0.067, self.frame.height*0.508, self.frame.width*0.867, self.frame.height*0.09)
-        usernameTextfield.textColor = UIColor.whiteColor()
-        passwordTextfield.attributedPlaceholder = NSAttributedString(string: "Senha", attributes: attributes)
+        passwordTextfield.textColor = UIColor.whiteColor()
+        passwordTextfield.attributedPlaceholder = NSAttributedString(string: "senha", attributes: attributes)
         passwordTextfield.borderStyle = UITextBorderStyle.None
         passwordTextfield.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
         passwordTextfield.textAlignment = .Center
