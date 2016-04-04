@@ -23,7 +23,7 @@ class AlterarDisciplinaController: UIViewController {
         
         alterarDisciplina_View.G1checkedButton.addTarget(self, action: #selector(AlterarDisciplinaController.changeCheckedStatus(_:)), forControlEvents: UIControlEvents.TouchUpInside)
        
-        alterarDisciplina_View.addSubjectButton.addTarget(self, action: #selector(AlterarDisciplinaController.addSavePressed), forControlEvents: UIControlEvents.TouchUpInside)
+        alterarDisciplina_View.saveSubjectDataButton.addTarget(self, action: #selector(AlterarDisciplinaController.savePressed), forControlEvents: UIControlEvents.TouchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +31,7 @@ class AlterarDisciplinaController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func addSavePressed () {
+    func savePressed () {
         performSegueWithIdentifier("backtomeuperiodo", sender: self)
         
     }

@@ -26,7 +26,6 @@ class HistoricoController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         historico_View = HistoricoView(frame: self.view.frame)
         self.view.addSubview(historico_View)
-        
         HistoricoTableView.backgroundView = nil
 
         // Do any additional setup after loading the view.

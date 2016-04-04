@@ -79,4 +79,19 @@ class MeuPeriodoController: UIViewController, UITableViewDataSource, UITableView
         self.navigationController?.navigationBar.hidden = false
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "GoToSubject" {
+            
+//            let indexPaths = self.meuPeriodoTableView.indexPathsForSelectedItems()!
+//            let indexPath = indexPaths[0] as NSIndexPath
+            
+            let vc = segue.destinationViewController as! AlterarDisciplinaController
+            let index = meuPeriodoTableView.indexPathForSelectedRow?.row
+            vc.codigoDisciplina = listaTodasDisciplinas[index!].codigo
+            vc.nomeDisciplina = listaTodasDisciplinas[index!].nome
+            
+        }
+
+    }
+    
 }

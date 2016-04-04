@@ -17,7 +17,7 @@ class AlterarDisciplinaView: UIView {
     let grauTitleLabel = UILabel()
     let grau = UILabel()
     
-    let addSubjectButton = UIButton()
+    let saveSubjectDataButton = UIButton()
     let titLabel = UILabel()
     let plusShape = UIImageView()
     
@@ -58,12 +58,15 @@ class AlterarDisciplinaView: UIView {
     }
     
     func setGradeView(grade: UIView, gradeLabel: UILabel, gradeText: String, gradeTextField: UITextField, gradeCheckedButton: UIButton, gradeCheckedImage: UIImageView, gradeCheckedSquareImage: UIImageView) {
+        
         var h = grade.frame.height
         var w = grade.frame.width
         grade.backgroundColor = UIColor.clearColor()
         
-        gradeLabel.frame = CGRectMake(0.331*w,0*h,0.214*w,0.935*h)
+        gradeLabel.frame = CGRectMake(0.331*w,0*h,0.22*w,0.935*h)
         gradeLabel.text = gradeText
+        gradeLabel.font = gradeLabel.font.fontWithSize(36/46*h)
+        gradeLabel.textColor = UIColor.whiteColor()
         grade.addSubview(gradeLabel)
         
         gradeTextField.frame = CGRectMake(0.727*w,0.13*h,0.273*w,0.87*h)
@@ -91,30 +94,34 @@ class AlterarDisciplinaView: UIView {
     }
     
     func addCustomView(subjectCode: String, subjectName: String) {
-        let h = frame.height
-        let w = frame.width
+        var h = frame.height
+        var w = frame.width
 
         let font36: CGFloat = (36/667)*h
         let font18: CGFloat = (18/667)*h
+        let font14: CGFloat = (14/667)*h
         
         background.frame = CGRectMake(0, 0, w, h)
         background.colors = [UIColor.azul(), UIColor.laranja()]
         self.addSubview(background)
         
-        addSubjectButton.frame =  CGRectMake(0.331*w,0.825*h,0.339*w,0.081*h)
-        addSubjectButton.backgroundColor = UIColor.clearColor()
-        self.addSubview(addSubjectButton)
+        saveSubjectDataButton.frame =  CGRectMake(0.403*w,0.651*h,0.197*w,0.082*h)
+        saveSubjectDataButton.backgroundColor = UIColor.clearColor()
+        self.addSubview(saveSubjectDataButton)
 
+        subtitle.frame = CGRectMake(0*w,0.199*h,1*w,0.031*h)
+        subtitle.textAlignment = .Center
+        subtitle.text = subjectName
+        subtitle.textColor = UIColor.whiteColor()
+        subtitle.font = title.font.fontWithSize(font18)
+        self.addSubview(subtitle)
         
-        title.frame = CGRectMake(0.345*w,0.135*h,0.309*w,0.064*h)
+        title.frame = CGRectMake(0*w,0.135*h,w,0.064*h)
         title.text = subjectCode
         title.font = UIFont(name: "Lane - Narrow", size: font36)
         title.textColor = UIColor.whiteColor()
-        
-        subtitle.frame = CGRectMake(0.315*w,0.199*h,0.373*w,0.031*h)
-        title.text = subjectName
-        title.textColor = UIColor.whiteColor()
-        title.font.fontWithSize(font18)
+        title.textAlignment = .Center
+        self.addSubview(title)
         
         G1.frame = CGRectMake(0.037*w,0.277*h,0.587*w,0.069*h)
         setGradeView(G1, gradeLabel: G1Label, gradeText: "G1", gradeTextField: G1TextField, gradeCheckedButton: G1checkedButton, gradeCheckedImage: G1checkedImage, gradeCheckedSquareImage: G1squareImage)
@@ -132,16 +139,19 @@ class AlterarDisciplinaView: UIView {
         setGradeView(G4, gradeLabel: G4Label, gradeText: "G3", gradeTextField: G4TextField, gradeCheckedButton: G4checkedButton, gradeCheckedImage: G4checkedImage, gradeCheckedSquareImage: G4squareImage)
         addSubview(G4)
         
-        titLabel.text = "Salvar"
-        titLabel.frame = CGRectMake(0*w,0.685*h,1*w,0.315*h)
-        titLabel.font.fontWithSize(font18)
-        titLabel.textColor = UIColor.blackColor()
+        h = saveSubjectDataButton.frame.height
+        w = saveSubjectDataButton.frame.width
+        
+        titLabel.text = "salvar notas"
+        titLabel.frame = CGRectMake(-0.05*w,0.691*h,1.1*w,0.309*h)
+        titLabel.font = UIFont.systemFontOfSize(font14)
+        titLabel.textColor = UIColor.whiteColor()
         titLabel.textAlignment = .Center
-        addSubjectButton.addSubview(titLabel)
+        saveSubjectDataButton.addSubview(titLabel)
         
         plusShape.image = UIImage(named: "save")
-        plusShape.frame = CGRectMake(0.09*w,0*h,0.09*w,0.09*h)
-        addSubjectButton.addSubview(plusShape)
+        plusShape.frame = CGRectMake(0.284*w,0*h,0.432*w,0.636*h)
+        saveSubjectDataButton.addSubview(plusShape)
         
     }
     

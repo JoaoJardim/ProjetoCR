@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().backgroundImage = UIImage()
         UITabBar.appearance().backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
         UITabBar.appearance().tintColor = UIColor.azul()
+        UINavigationBar.appearance().barTintColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
+        UINavigationBar.appearance().tintColor = UIColor.azul()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.azul()]
         return true
 	}
 
